@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
   <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" type="text/css">
-  <link href="style.css" rel="{{ url_for('static', filename='css/style.css" />
+  <link href="style.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -71,7 +71,8 @@
   <div class="quickmenu">
     <ul>
       <li> <a href="https://open.kakao.com/me/eunzgi" target="_blank">
-        <img src="{{ url_for('static', filename='assets/kakaotalk.jpg') }}" width="40" height="40"> </a> 
+        <img src="./assets/kakaotalk.jpg" width="40" height="40"> </a> 
+      </li>
       <li>
         <h5>카카오톡<br>채팅 상담</h5>
       </li>
@@ -267,7 +268,7 @@
     <div class="col-sm-7 slideanim">
       <div class="row">
         <div class="col-sm-6 form-group">
-		<form action="/process" method="post"> 
+		<form action="#" method="post"> 
           		<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">

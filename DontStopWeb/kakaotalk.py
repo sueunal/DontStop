@@ -17,7 +17,6 @@ data = {
                                               }
     })
 }
-
 response = requests.post(url, headers=headers, data=data)
 print(response.status_code)
 if response.json().get('result_code') == 0:
