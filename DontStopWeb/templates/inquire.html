@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <title>렌탈스타터</title>
+  <title>렌탈스타트</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
+  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> <!-- Favicon-->        
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />   <!-- Simple line icons-->
+  <link href="style.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link href="style.css" rel="stylesheet" />
- 
+
 </head>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -23,7 +28,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Rentalstarter</a>
+      <a class="navbar-brand" href="#myPage">Rentalstart</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -38,42 +43,60 @@
 </nav>
 
 <div class="jumbotron text-center">
-<h1>렌탈스타터</h1> 
-<h2 class="text-center">음식점 전문 상담사를 연결해 드릴게요</h2>
+<h1>렌탈스타트</h1> 
+<h3 class="text-center">음식점 전문 상담사를 연결해 드릴게요</h3>
 </div>
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid">
   <div class="row">
-    <h3>1. 필요한 물품을 선택해주세요!</h3>
+    <h2>1. 필요한 물품을 선택해주세요!</h2>
     <div class="col-sm-7 slideanim">
       <div class="row">
         <div class="form-check">
-            <div class="checkbox">
-                <label><input type="checkbox" value="">Option 1</label>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" value="">Option 2</label>
-              </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">Option 1</label>
           </div>
-          <br>
-    <h3>2. 사업의 형태가 어떻게 되시나요?</h3>
-        <label class="radio-inline"><input type="radio" name="optradio" checked>개인사업자</label>
-        <label class="radio-inline"><input type="radio" name="optradio">법인사업자</label>
-        <label class="radio-inline"><input type="radio" name="optradio">없음</label>
-        
-        <div class="form-group">
-          <br>
-            <label for="comment"><h3>3. 문의하실 내용을 남겨주세요.</h3></label>
-            <textarea class="form-control" placeholder="궁금하신 내용을 입력해주세요" data-sb-validations="required" rows="3" id="comment"></textarea>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">Option 2</label>
           </div>
+        </div>
+      </div>
+    </div>
+    <h2>2. 사업의 형태가 어떻게 되시나요?</h2>
+      <label class="radio-inline"><input type="radio" name="optradio" checked>개인사업자</label>
+      <label class="radio-inline"><input type="radio" name="optradio">법인사업자</label>
+      <label class="radio-inline"><input type="radio" name="optradio">없음</label>
+
+    <h2>3. 문의 유형을 선택해주세요. </h2>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="form-check">
+          <div class="checkbox">
+            <label><input type="checkbox" value="">견적문의</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">제품문의</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="">문의</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <br>
+        <label for="comment"><h2>4. 문의하실 내용을 남겨주세요.</h2></label>
+        <textarea class="form-control" placeholder="궁금하신 내용을 입력해주세요" data-sb-validations="required" rows="3" id="comment"></textarea>
+        <div class="invalid-feedback" data-sb-feedback="message:required">내용을 입력해주세요.</div>
+        </div>
     
         <!-- <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
+        </div> 
       </div>
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
       <div class="row"> -->
@@ -88,11 +111,14 @@
 <!-- Image of location/map -->
 <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
 
-<!-- <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  <p>HOME</p>
-</footer> -->
+<footer class="container-fluid text-center">
+  <ul class="list-inline mb-5">
+    <li class="list-inline-item">
+      <a class="social-link rounded-circle" href="#!"><i class="icon-social-facebook"></i></a>
+    </li>
+  </ul>
+      <p class="text-muted small mb-0">Copyright &copy; 멈추지마</p>  
+</footer>
 
 <script>
 $(document).ready(function(){

@@ -9,11 +9,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
   <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> <!-- Favicon-->        
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />   <!-- Simple line icons-->
   <link href="style.css" rel="{{ url_for('static', filename='css/style.css') }}" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -69,6 +73,7 @@
     <ul>
       <li> <a href="https://open.kakao.com/me/eunzgi" target="_blank">
         <img src="{{ url_for('static', filename='assets/kakaotalk.jpg') }}" width="40" height="40"> </a> 
+      </li>
       <li>
         <h5>카카오톡<br>채팅 상담</h5>
       </li>
@@ -220,7 +225,7 @@
     <div class="text-center">
         <div class="col-sm-4 col-xs-12">
             <div class="panel-footer">
-                <a href="inquire.html" class="btn btn-lg" role="button">음식점</a>
+                <a href="/inquire" class="btn btn-lg" role="button">음식점</a>
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
@@ -291,6 +296,12 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   <p>HOME</p>
+    <ul class="list-inline mb-5">
+      <li class="list-inline-item">
+          <a class="social-link rounded-circle" href="#!"><i class="icon-social-facebook"></i></a>
+      </li>
+  </ul>
+  <p class="text-muted small mb-0">Copyright &copy; 멈추지마</p>  
 </footer>
 
 
