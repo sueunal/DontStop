@@ -18,7 +18,7 @@ app = Flask(__name__)
 # )
 # """
 
-# db = pymysql.connect(host='localhost', port=11245, user='root', passwd='vip0818^^!', db='DontStop', charset='utf8')
+db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 
 
 @app.route('/', methods= ['POST','GET'])
@@ -37,7 +37,7 @@ def process():
         message = request.form['comments']
 
         cursor = db.cursor()
-        query = "INSERT INTO Messages (name, email, comments) VALUES (%s, %s,%s)"
+        query = "INSERT INTO Counseling(name, email, comments) VALUES (%s, %s,%s)"
         cursor.execute(query,(name,email,message))
 
         db.commit()
@@ -54,4 +54,4 @@ def process():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=8888, debug=True)

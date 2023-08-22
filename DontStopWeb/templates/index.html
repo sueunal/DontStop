@@ -28,7 +28,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.html">Rentalstart</a>
+      <a class="navbar-brand" href="/">Rentalstart</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -227,7 +227,7 @@
     <div class="text-center">
         <div class="col-sm-4 col-xs-12">
             <div class="panel-footer">
-                <a href="./inquire.html" class="btn btn-lg" role="button">음식점</a>
+                <a href="{{url_for('inquire')}}" class="btn btn-lg" role="button">음식점</a>
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
@@ -295,12 +295,12 @@
 <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
 
 <footer class="container-fluid text-center">
-  <a href="#HomePage" title="To Top">
+  <a href="/" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   <p>HOME</p>
     <ul class="list-inline mb-5">
       <li class="list-inline-item">
-          <a class="social-link rounded-circle" href="#!"><i class="icon-social-facebook"></i></a>
+          <a class="social-link rounded-circle" href="/"><i class="icon-social-facebook"></i></a>
       </li>
   </ul>
   <p class="text-muted small mb-0">Copyright &copy; 멈추지마</p>  
@@ -311,7 +311,7 @@
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#HomePage']").on('click', function(event) {
+  $(".navbar a, footer a[href='/']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
