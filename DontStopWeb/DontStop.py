@@ -39,9 +39,9 @@ def process():
         message = request.form['comments']
 
         cursor = db.cursor()
-        query = "INSERT INTO Counseling(name, email, comments) VALUES (%s, %s,%s)"
+        # no, date time 사용자가 입력시 db 에 자동으로 날짜 삽입
+        query = "INSERT INTO Counseling(name, email, comment) VALUES (%s, %s,%s)"
         cursor.execute(query,(name,email,message))
-
         db.commit()
 #        cursor.execute("SELECT * FROM Messages")
 #        data = cursor.fetchall()
