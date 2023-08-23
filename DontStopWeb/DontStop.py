@@ -16,8 +16,10 @@ app = Flask(__name__)
 #     password=app.config['MYSQL_PASSWORD'],
 #     db=app.config['MYSQL_DB']
 # )
-# """
+# ""
 
+# db 접속시 필요한 설정 없으면 디비 연결 X, 은지 개인PC에서 실행시 주석 처리 해주고 실행해야함
+# 실행방법 python3 DonStop.py cmd 에서 명령어 쳐야함 또는 오른쪽 위 실행 아이콘 클릭
 db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 
 
