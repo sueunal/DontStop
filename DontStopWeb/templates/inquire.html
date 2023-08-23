@@ -4,17 +4,20 @@
   <title>렌탈스타트</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/static/css/Montserrat.css">
+  <link href="/static/css/Montserrat.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/FontsLato.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
-  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> <!-- Favicon-->        
-  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />   <!-- Simple line icons-->
-  <link href="style.css" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->        
+  <script src="/static/css/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
+  <link href="/static/css/simple-line-icons.min.css" rel="stylesheet" />   <!-- Simple line icons-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap_3.4.1_css_bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="/static/css/jquery.min.js"></script>
+  <script src="/static/css/bootstrap.min.js"></script>
+  <script src="/static/css/jquery.min.js"></script>
 
 </head>
 
@@ -51,7 +54,7 @@
 <div id="contact" class="container-fluid">
   <div class="row">
     <h2>1. 필요한 물품을 선택해주세요!</h2>
-    <div class="col-sm-7 slideanim">
+    <div class="col-sm-6 slideanim">
       <div class="row">
         <div class="form-check">
           <div class="checkbox">
@@ -60,7 +63,6 @@
           <div class="checkbox">
             <label><input type="checkbox" value="">Option 2</label>
           </div>
-        </div>
       </div>
     </div>
     <h2>2. 사업의 형태가 어떻게 되시나요?</h2>
@@ -69,7 +71,7 @@
       <label class="radio-inline"><input type="radio" name="optradio">없음</label>
 
     <h2>3. 문의 유형을 선택해주세요. </h2>
-    <div class="col-sm-7 slideanim">
+    <div class="col-sm-6 slideanim">
       <div class="row">
         <div class="form-check">
           <div class="checkbox">
@@ -83,13 +85,14 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="form-group">
-      <br>
-        <label for="comment"><h2>4. 문의하실 내용을 남겨주세요.</h2></label>
-        <textarea class="form-control" placeholder="궁금하신 내용을 입력해주세요" data-sb-validations="required" rows="3" id="comment"></textarea>
-        <div class="invalid-feedback" data-sb-feedback="message:required">내용을 입력해주세요.</div>
+        <div class="form-group">
+          <br>
+            <label for="comment"><h2>4. 문의하실 내용을 남겨주세요.</h2></label>
+            <textarea class="form-control" placeholder="궁금하신 내용을 입력해주세요" data-sb-validations="required" rows="3" id="comment"></textarea>
+            <div class="invalid-feedback" data-sb-feedback="message:required">내용을 입력해주세요.</div>
         </div>
+     </div>
+
     
         <!-- <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
