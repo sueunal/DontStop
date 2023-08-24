@@ -18,7 +18,7 @@ app = Flask(__name__)
 # )
 # """
 
-# db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
+db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 
 
 @app.route('/', methods= ['POST','GET'])
@@ -41,10 +41,8 @@ def process():
         cursor.execute(query,(name,email,message))
 
         db.commit()
-#        cursor.execute("SELECT * FROM Messages")
-#        data = cursor.fetchall()
-
         cursor.close()
+
         return render_template('index.html')
     else:
         return render_template('index.html')
