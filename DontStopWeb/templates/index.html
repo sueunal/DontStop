@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <title>렌탈스타트</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/static/css/Montserrat.css">
   <link href="/static/css/Montserrat.css" rel="stylesheet" type="text/css">
@@ -12,47 +11,44 @@
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
   <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
-  <script src="/static/css/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
-  <link href="/static/css/simple-line-icons.min.css" rel="stylesheet" /> <!-- Simple line icons-->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap_3.4.1_css_bootstrap.min.css') }}">
+  <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
+  <link rel="stylesheet" href="/static/css/simple-line-icons.min.css">     <!-- Simple line icons -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <script src="/static/css/jquery.min.js"></script>
-  <script src="/static/css/bootstrap.min.js"></script>
-  <script src="/static/css/jquery.min.js"></script>
-
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/bootstrap.bunble.min.js"></script>
 </head>
 
-<body id="HomePage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
-  <nav class="navbar navbar-default navbar-fixed-top">
+<body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-expand-lg">
     <div class="container">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Rentalstart</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#services">SERVICES</a></li>
-          <li><a href="#portfolio">PORTFOLIO</a></li>
-          <li><a href="#select">SELECT</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </div>
+    <a class="navbar-brand" href="/">Rentalstart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
     </div>
   </nav>
 
   <div class="jumbotron text-center">
     <span><em>렌탈을 쉽게 시작하는 곳</em></span>
-    <h1>Rentalstart</h1>
+    <h1 class="display-4">Rentalstart</h1>
     <p>최저가보다 최저가로 렌탈서비스 이용</p>
     <a class="text-center" href="#" role="button">
-      <button type="button" class="btn btn-default">간편상담신청하기</button>
+      <button type="button" class="btn btn-light">간편상담신청하기</button>
     </a>
   </div>
 
@@ -68,7 +64,7 @@
           4. 물품 공급 및 설치<br>
           5. 분할 납부 시작<br></h5>
         <p>전 제품을 합리적으로 구매하세요.</p>
-        <br><button class="btn btn-default btn-lg">Get in Touch</button>
+        <br><button class="btn btn-light btn-sm">Get in Touch</button>
       </div>
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-ok logo"></span>
@@ -300,23 +296,22 @@
 
     <script>
       $(document).ready(function () {
-        // Add smooth scrolling to all links in navbar + footer link
+        // 네비게이션 바 링크 클릭 시 스크롤 애니메이션 적용
         $(".navbar a, footer a[href='/']").on('click', function (event) {
           // Make sure this.hash has a value before overriding default behavior
           if (this.hash !== "") {
             // Prevent default anchor click behavior
             event.preventDefault();
 
-            // Store hash
+            // 클릭된 링크 속성 값 가져옴
             var hash = this.hash;
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            // 스크롤 애니메이션 적용
             $('html, body').animate({
               scrollTop: $(hash).offset().top
             }, 900, function () {
 
-              // Add hash b(#) to URL when done scrolling (default click behavior)
+              // URL의 해시 값을 업데이트 (뒤로 가기 버튼을 위해)
               window.location.hash = hash;
             });
           } // End if

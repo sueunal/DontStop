@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <title>렌탈스타트</title>
   <meta charset="utf-8">
@@ -10,15 +11,13 @@
   <link href="/static/css/FontsLato.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
   <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->        
-  <script src="/static/css/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
-  <link href="/static/css/simple-line-icons.min.css" rel="stylesheet" />   <!-- Simple line icons-->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap_3.4.1_css_bootstrap.min.css') }}">
+  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
+  <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
+  <link href="/static/css/simple-line-icons.min.css" rel="stylesheet" /> <!-- Simple line icons-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <script src="/static/css/jquery.min.js"></script>
-  <script src="/static/css/bootstrap.min.js"></script>
-  <script src="/static/css/jquery.min.js"></script>
-
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
 </head>
 
 <body id="mypage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -49,8 +48,8 @@
 </div>
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid ">
-  <div class="col-sm-6 slideanim">
+<div id="contact" class="card card-body">
+  <div class="col-sm-6 slideanim ">
     <h2>1. 필요한 물품을 선택해주세요!</h2>
     <div class="form-check">
       <div class="checkbox">
@@ -91,9 +90,6 @@
 </div>
 </div>
 
-<!-- Image of location/map -->
-<!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
-
 <footer class="container-fluid text-center">
   <ul class="list-inline mb-5">
     <li class="list-inline-item">
@@ -102,6 +98,8 @@
   </ul>
       <p class="text-muted small mb-0">Copyright &copy; 멈추지마</p>  
 </footer>
+
+
 
 <script>
 $(document).ready(function(){
