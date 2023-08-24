@@ -126,25 +126,25 @@ body {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 30px;
     text-transform: uppercase;
     color: #a299ca;
-    font-weight: 600;
-    margin-bottom: 30px;
+    font-weight: 800;
+    margin-bottom: 15px;
   }
-  h4 {
+h4 {
     font-size: 19px;
     line-height: 1.375em;
     color: #303030;
     font-weight: 400;
     margin-bottom: 30px;
-  }  
+}  
 
 .jumbotron {
   background-color: #ecec84;
   color: #fff;
   padding: 100px 25px;
-  font-family: "BM Plex Sans KR", sans-serif;
+  font-family: "GmarketSans", sans-serif;
 }
 
 .container-fluid {
@@ -207,6 +207,7 @@ h2 {
   border: 1px solid #a299ca;
   border-radius: 0 !important;
   transition: box-shadow 0.5s;
+  padding: 50px 50px 50px 50px ;
 }
 
 .panel:hover {
@@ -248,6 +249,7 @@ h2 {
   margin: 15px 0;
   background-color: #a299ca;
   color: #fff;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .2);
 }
 
 .navbar {
@@ -255,11 +257,11 @@ h2 {
   background-color: #ecec84;
   z-index: 9999;
   border: 0;
-  font-size: 12px !important;
+  font-size: 17px !important;
   line-height: 1.42857143 !important;
   letter-spacing: 4px;
   border-radius: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: "GmarketSans";
 }
 
 .navbar li a,
@@ -312,10 +314,8 @@ li {
 
 a {
   text-align: center;
-  text-decoration: none;
-  /* 링크의 밑줄 제거 */
-  color: inherit;
-  /* 링크의 색상 제거 */
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit;       /* 링크의 색상 제거 */
 }
 
 .list-inline {
@@ -330,8 +330,8 @@ a {
 .social-link {
   display: block;
   text-decoration: none;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
   background-color: #a299ca;
