@@ -25,10 +25,24 @@ db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='v
 def index():
     return render_template('index.html')
 
+
 @app.route('/inquire', methods=['GET'])
 def inquire():
     return render_template('inquire.html')
 
+@app.route('/inquire_process', methods=['POST'])
+def inquire_process():
+    if request.method == 'POST':
+        option1 = request.form['option1']
+        option2 = request.form['option2']
+        # name = request.form['name']
+        detaillistOptions = request.form['detaillistOptions']
+        phone = request.form['phone']
+        comments = request.form['comments']
+        print(option1,option2,detaillistOptions,phone,comments)
+        
+        return render_template('index.html')
+    return render_template('index.html')
 @app.route('/process', methods=['POST'])
 def process():
     if request.method == 'POST':
