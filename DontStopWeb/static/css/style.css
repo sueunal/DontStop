@@ -142,7 +142,7 @@ h4 {
 
 .jumbotron {
   background-color: #fff;
-  color: #ecec84;
+  color: var(--bs-purple);
   padding: 100px 25px;
   font-family: "GmarketSans", sans-serif;
 }
@@ -231,6 +231,11 @@ h4 {
   border-bottom-right-radius: 0px;
 }
 
+.btn {
+  background-color: #F4DD4E;
+  color: white;
+}
+
 .panel-footer {
   background-color: white !important;
   padding: 25px;
@@ -254,7 +259,7 @@ h4 {
 
 .navbar {
   margin-bottom: 0;
-  background-color: #ecec84;
+  background-color: #F4DD4E;
   z-index: 9999;
   border: 0;
   font-size: 17px !important;
@@ -271,7 +276,7 @@ h4 {
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-  color: #ecec84 !important;
+  color: #F4DD4E !important;
   background-color: #fff !important;
 }
 
