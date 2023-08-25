@@ -3,64 +3,73 @@
 <head>
   <title>렌탈스타트</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/static/css/Montserrat.css">
+  <link href="/static/css/Montserrat.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/FontsLato.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
-  <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet" type="text/css">
-  <link href="style.css" rel="{{ url_for('static', filename='css/style.css') }}" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
+  <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/simple-line-icons.min.css') }}">     <!-- Simple line icons -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/bootstrap.bunble.min.js"></script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Rentalstart</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#select">SELECT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+
+<body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-expand-sm">
+    <div class="container">
+    <a class="navbar-brand" href="/">Rentalstart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
       </ul>
     </div>
-  </div>
-</nav>
-
-<div class="jumbotron text-center">
-  <span><em>렌탈을 쉽게 시작하는 곳</em></span>
-  <h1>Rentalstart</h1>
-  <p>최저가보다 최저가로 렌탈서비스 이용</p> 
-    <a class="text-center" href="#" role="button">
-        <button type="button" class="btn btn-default">간편상담신청하기</button>
-    </a>
-</div>
-
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>About RentalStart</h2><br>
-      <h4>Rentalstart 이용 절차가 어떻게 되나요?</h4>
-       <h5>1. 간편 상담(필요 물품 상담 진행)<br>
-            2. 견적 제안(분할 납부 금액 제안)<br>
-            3. 심사 및 계약(자격 요건 심사 후 통과 시 계약 진행. 신용도 영향 없음)<br>
-            4. 물품 공급 및 설치<br>
-            5. 분할 납부 시작<br></h5>
-      <p>전 제품을 합리적으로 구매하세요.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-ok logo"></span>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <span><em>렌탈을 쉽게 시작하는 곳</em></span>
+    <h1 class="display-3">Rentalstart</h1>
+    <p>최저가보다 최저가로 렌탈서비스 이용</p>
+    <a class="text-center" href="/inquire" role="button">
+      <button type="button" class="btn btn-light">간편상담신청하기</button>
+    </a>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>About RentalStart</h2><br>
+        <h3>🤔 Rentalstart 이용 절차가 어떻게 되나요?</h3><br>
+        <h4>
+          1️⃣ 간편 상담(필요 물품 상담 진행)<br>
+          2️⃣ 견적 제안(분할 납부 금액 제안)<br>
+          3️⃣ 심사 및 계약(자격 요건 심사 후 통과 시 계약 진행. 신용도 영향 없음)<br>
+          4️⃣ 물품 공급 및 설치<br>
+          5️⃣ 분할 납부 시작<br></h4>
+        <p>전 제품을 합리적으로 구매하세요.❕</p>
+        <br><button class="btn btn-light btn-sm">Get in Touch</button>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-ok logo"></span>
+      </div>
     </div>
   </div>
 
@@ -68,30 +77,79 @@
   <div class="quickmenu">
     <ul>
       <li> <a href="https://open.kakao.com/me/eunzgi" target="_blank">
-        <img src="{{ url_for('static', filename='assets/kakaotalk.jpg') }}" width="40" height="40"> </a> 
+          <img src="{{ url_for('static', filename='img/kakaotalk.jpg') }}" width="40" height="40"> </a>
+      </li>
       <li>
-        <h5>카카오톡<br>채팅 상담</h5>
+        <h4>카카오톡<br>채팅 상담</h4>
       </li>
 
     </ul>
   </div>
-  
-</div>
 
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-th logo slideanim"></span>
+  <div id="myCarousel" class="carousel slide bg-grey text-center" data-ride="carousel">
+    <br><br>
+    <h2>사용자 후기</h2>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+      <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"넘 좋아요!"<br><span>김땡땡, 목포, 음식점</span></h4>
+      </div>
+      <div class="item">
+        <h4>"완전 싸요!!"<br><span>박땡땡, 서울, 중소기업</span></h4>
+      </div>
+      <div class="item">
+        <h4>"합리적 편리 간단"<br><span>강땡땡, 광주, 병원</span></h4>
+      </div>
     </div>
-    <div class="col-sm-8">
-      <h2>큰 제목</h2><br>
-      <h4><strong>이거는</strong> 이거 블라블라.</h4><br>
-      <p><strong>요거는 </strong>요거  블라블라</p>
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-</div>
+
+  <!-- Container (Portfolio Section) -->
+  <div id="portfolio" class="container-fluid text-center">
+    <h2>이러한것들~</h2><br>
+    <h4>렌탈해줍니다~</h4>
+    <div class="row text-center slideanim">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./assets/air-conditioner (1).png" alt="영문" width="200" height="200">
+          <p><strong>A</strong></p>
+          <p>BCDE</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./assets/water-dispenser.png" alt="한글" width="200" height="200">
+          <p><strong>가</strong></p>
+          <p>나다라마</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./assets/insurance.png" alt="숫자" width="200" height="200">
+          <p><strong>1</strong></p>
+          <p>23456</p>
+        </div>
+      </div>
+    </div><br>
+  </div>
+
 <!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
+<div id="services" class="container-fluid bg-grey text-center">
   <h2>SERVICES</h2>
   <h4>What we offer</h4>
   <br>
@@ -132,210 +190,133 @@
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>이러한것들~</h2><br>
-  <h4>렌탈해줍니다~</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="./assets/air-conditioner (1).png" alt="영문" width="200" height="200">
-        <p><strong>A</strong></p>
-        <p>BCDE</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="./assets/water-dispenser.png" alt="한글" width="200" height="200">
-        <p><strong>가</strong></p>
-        <p>나다라마</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="./assets/insurance.png" alt="숫자" width="200" height="200">
-        <p><strong>1</strong></p>
-        <p>23456</p>
-      </div>
-    </div>
-  </div><br>
-  
-  <h2>사용자 후기</h2>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <h4>"넘 좋아요!"<br><span>김땡땡, 목포, 음식점</span></h4>
-      </div>
-      <div class="item">
-        <h4>"완전 싸요!!"<br><span>박땡땡, 서울, 중소기업</span></h4>
-      </div>
-      <div class="item">
-        <h4>"합리적 편리 간단"<br><span>강땡땡, 광주, 병원</span></h4>
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-
-<!-- Container (Select Section) -->
-<div id="select" class="container-fluid">
-  <div class="text-center">
-    <h2>운영/창업 하는 업종이 어떻게 되시나요?</h2>
-    <h4>선택해주세요.</h4>
-  </div>
-  <div class="row slideanim">   
-    <!--<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>      
-    </div>   -->     
+  <!-- Container (Select Section) -->
+  <div id="select" class="container-fluid">
     <div class="text-center">
-        <div class="col-sm-4 col-xs-12">
-            <div class="panel-footer">
-                <a href="inquire.html" class="btn btn-lg" role="button">음식점</a>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-            <div class="panel-footer">
-                    <button class="btn btn-lg">카페</button>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-            <div class="panel-footer">
-                <button class="btn btn-lg">숙박업</button>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-            <div class="panel-footer">
-                <button class="btn btn-lg">제조업</button>
-            </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-            <div class="panel-footer">
-                <button class="btn btn-lg">병원</button>
-            </div>
-        </div>    
-        <div class="col-sm-4 col-xs-12">
-            <div class="panel-footer">
-                <button class="btn btn-lg">기타</button>
-            </div>
-        </div>       
+      <h2>운영/창업 하는 업종이 어떻게 되시나요?</h2>
+      <h4>선택해주세요.</h4>
     </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <h3> 24시간 상담 문의 가능.&#x1F4E2</h3>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Mokpo</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-		<form action="/process" method="post"> 
-          		<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+      <div class="row slideanim text-center">
+        <div class="col-sm-4">
+          <div class="panel-footer">
+            <a href="{{url_for('inquire')}}" class="btn btn-lg" role="button">음식점</a>
+          </div>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        <div class="col-sm-4">
+          <div class="panel-footer">
+            <button class="btn btn-lg">카페</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel-footer">
+            <button class="btn btn-lg">숙박업</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel-footer">
+            <button class="btn btn-lg">제조업</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel-footer">
+            <button class="btn btn-lg">병원</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel-footer">
+            <button class="btn btn-lg">기타</button>
+          </div>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container-fluid bg-grey">
+      <h2 class="text-center">CONTACT</h2><br>
       <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-		</form>
+        <div class="col-sm-5">
+          <h3> 24시간 상담 문의 가능.&#x1F4E2</h3>
+          <p><span class="glyphicon glyphicon-map-marker"></span> Mokpo</p>
+          <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+          <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        </div>
+        <div class="col-sm-7 slideanim">
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <form action="/process" method="post">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+            </div>
+          </div><br>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+          <div class="row">
+            <div class="form-group">
+              <button class="btn btn-light pull-right" type="submit">Send</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
+      <p>주문 확정과는 상관없이 렌탈스타트는 고객과 파트너간의 상담 경험을 적극 추천합니다.<br>
+        무료 상담으로 진행되며 주문 확정 후 미계약 처리 시 결제가 이루어지지 않습니다. </p>
     </div>
-  </div>
-  <p>주문 확정과는 상관없이 렌탈스타트는 고객과 파트너간의 상담 경험을 적극 추천합니다.<br>
-    무료 상담으로 진행되며 주문 확정 후 미계약 처리 시 결제가 이루어지지 않습니다. </p>
-</div>
 
-<!-- Image of location/map -->
-<!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
-
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  <p>HOME</p>
-</footer>
-
+    <footer class="container-fluid text-center">
+      <a href="/" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        <p>HOME</p>
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle" href="/"><i class="icon-social-instagram"></i></a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; 멈추지마</p>
+    </footer>
 
 
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+    <script>
+      $(document).ready(function () {
+        // 네비게이션 바 링크 클릭 시 스크롤 애니메이션 적용
+        $(".navbar a, footer a[href='/']").on('click', function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash b(#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
+            // 클릭된 링크 속성 값 가져옴
+            var hash = this.hash;
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-  var currentPosition = parseInt($(".quickmenu").css("top"));
-    $(window).scroll(function() {
-      var position = $(window).scrollTop(); 
-    $(".quickmenu").stop().animate({"top":position+currentPosition+"px"},1000);
-  });
-})
-</script>
+            // 스크롤 애니메이션 적용
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 900, function () {
+
+              // URL의 해시 값을 업데이트 (뒤로 가기 버튼을 위해)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        $(window).scroll(function () {
+          $(".slideanim").each(function () {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide");
+            }
+          });
+        });
+        var currentPosition = parseInt($(".quickmenu").css("top"));
+        $(window).scroll(function () {
+          var position = $(window).scrollTop();
+          $(".quickmenu").stop().animate({ "top": position + currentPosition + "px" }, 1000);
+        });
+      })
+    </script>
 
 </body>
+
 </html>

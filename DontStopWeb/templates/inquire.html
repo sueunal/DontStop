@@ -1,103 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <title>렌탈스타터</title>
+  <title>렌탈스타트</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/static/css/Montserrat.css">
+  <link href="/static/css/Montserrat.css" rel="stylesheet" type="text/css">
+  <link href="/static/css/FontsLato.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link href="style.css" rel="stylesheet" />
- 
+  <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
+  <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/simple-line-icons.min.css') }}">     <!-- Simple line icons -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/bootstrap.bunble.min.js"></script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+<body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-expand-sm">
+    <div class="container">
+      <a class="navbar-brand" href="/">Rentalstart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">Rentalstarter</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#select">SELECT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    </nav>
 
-<div class="jumbotron text-center">
-<h1>렌탈스타터</h1> 
-<h2 class="text-center">음식점 전문 상담사를 연결해 드릴게요</h2>
-</div>
+<!-- Page content-->
+<section class="py-5">
+  <div class="container px-5">
+      <!-- Contact form-->
+      <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+          <div class="text-center mb-5">
+              <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+              <h2 class="fw-bolder">간편 상담 신청</h2>
+              <p class="lead fw-normal text-muted mb-0">전문 상담사를 연결해 드릴게요!</p>
+          </div>
+         <form action="/inquire_process" method="post">
+          <div class="row gx-5 justify-content-center">
+              <div class="col-lg-8 col-xl-6">
+                        <p>필요한 물품을 선택해주세요!</p>
+                      <div class="form-check mb-4">
+                          <div class="checkbox">
+                              <label><input type="checkbox" name="option1" value="1">Option 1</label>
+                            </div>
+                            <div class="checkbox">
+                              <label><input type="checkbox" name="option2" value="냉장고">Option 2</label>
+                            </div>
+                      </div>
+                      <p>사업의 형태가 어떻게 되시나요?</p>
+                      <div class="form-control mb-4">
+                        <label class="radio-inline"><input type="radio" name="optradio" checked>개인사업자</label>
+                        <label class="radio-inline"><input type="radio" name="optradio">법인사업자</label>
+                        <label class="radio-inline"><input type="radio" name="optradio">없음</label>
+                      </div>
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid">
-  <div class="row">
-    <h3>1. 필요한 물품을 선택해주세요!</h3>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="form-check">
-            <div class="checkbox">
-                <label><input type="checkbox" value="">Option 1</label>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" value="">Option 2</label>
+                      <p>이름을 입력해주세요!</p>
+                      <div class="form-floating mb-4">
+                        <input class="form-control" type="text" id="name" placeholder="Enter your name..." data-sb-validations="required" />
+                        <label for="name">Full name</label>
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                      </div>
+
+                      <p>직책을 선택해주세요!</p>
+                        <input class="form-control mb-4" list="datalistOptions" id="exampleDataList" placeholder="Type to position ">
+                        <datalist id="datalistOptions">
+                          <option value="사장">
+                          <option value="점장">
+                          <option value="매니저">
+                        </datalist>
+
+                      <p>이메일을 입력해주세요!</p>
+                      <div class="form-floating mb-4">
+                          <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                          <label for="email">Email address</label>
+                          <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                          <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                      </div>
+
+                      <p>핸드폰 번호를 입력해주세요!</p>
+                      <div class="form-floating mb-4">
+                          <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                          <label for="phone">Phone number</label>
+                          <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                      </div>
+
+                      <p>문의하실 내용을 남겨주세요!</p>
+                      <div class="form-floating mb-4">
+                          <textarea class="form-control" type="text" id="comments" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                          <label for="message">Message</label>
+                          <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                      </div>
+                      <!-- Submit success message-->
+                      <!-- This is what your users will see when the form-->
+                      <!-- has successfully submitted-->
+                      <div class="d-none" id="submitSuccessMessage">
+                          <div class="text-center mb-3">
+                              <div class="fw-bolder">Form submission successful!</div>
+                              To activate this form, sign up at
+                              <br />
+                              <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                          </div>
+                      </div>
+                      <!-- Submit error message-->
+                      <!---->
+                      <!-- This is what your users will see when there is-->
+                      <!-- an error submitting the form-->
+                      <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                      <!-- Submit Button-->
+                      <div class="d-grid"><button class="btn btn-primary btn-lg abled" id="submitButton" type="submit">Submit</button></div>
               </div>
           </div>
-          <br>
-    <h3>2. 사업의 형태가 어떻게 되시나요?</h3>
-        <label class="radio-inline"><input type="radio" name="optradio" checked>개인사업자</label>
-        <label class="radio-inline"><input type="radio" name="optradio">법인사업자</label>
-        <label class="radio-inline"><input type="radio" name="optradio">없음</label>
-        
-        <div class="form-group">
-          <br>
-            <label for="comment"><h3>3. 문의하실 내용을 남겨주세요.</h3></label>
-            <textarea class="form-control" placeholder="궁금하신 내용을 입력해주세요" data-sb-validations="required" rows="3" id="comment"></textarea>
-          </div>
-    
-        <!-- <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row"> -->
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-lg " type="submit">Send</button>
-        </div>
-      </div>
-    </div>
   </div>
-</div>
+                  </form>
+</section>
 
-<!-- Image of location/map -->
-<!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
+<!-- 사업자명, 직책, 문의유형, 필요물품, 아이디, 이름, -->
 
-<!-- <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  <p>HOME</p>
-</footer> -->
+
+<footer class="container-fluid text-center">
+  <ul class="list-inline mb-5">
+    <li class="list-inline-item">
+      <a class="social-link rounded-circle" href="#!"><i class="icon-social-facebook"></i></a>
+    </li>
+  </ul>
+      <p class="text-muted small mb-0">Copyright &copy; 멈추지마</p>  
+</footer>
 
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  $(".navbar a, footer a[href='#HomePage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior

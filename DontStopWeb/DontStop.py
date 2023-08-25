@@ -1,34 +1,48 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from flask import request
 import pymysql
 
 
 app = Flask(__name__)
-"""
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'DontStop'
-app.config['MYSQL_PASSWORD'] = 'vip0818!'
-app.config['MYSQL_DB'] = 'DontStop'
+# """
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'DontStop'
+# app.config['MYSQL_PASSWORD'] = 'vip0818!'
+# app.config['MYSQL_DB'] = 'DontStop'
 
-mysql = pymysql.connect(
-    host=app.config['MYSQL_HOST'],
-    user=app.config['MYSQL_USER'],
-    password=app.config['MYSQL_PASSWORD'],
-    db=app.config['MYSQL_DB']
-)
-"""
+# mysql = pymysql.connect(
+#     host=app.config['MYSQL_HOST'],
+#     user=app.config['MYSQL_USER'],
+#     password=app.config['MYSQL_PASSWORD'],
+#     db=app.config['MYSQL_DB']
+# )
+# """
 
-db = pymysql.connect(host='localhost', port=11245, user='root', passwd='vip0818^^!', db='DontStop', charset='utf8')
+db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 
 
 @app.route('/', methods= ['POST','GET'])
 def index():
     return render_template('index.html')
 
+
 @app.route('/inquire', methods=['GET'])
 def inquire():
     return render_template('inquire.html')
 
+@app.route('/inquire_process', methods=['POST'])
+def inquire_process():
+    if request.method == 'POST':
+        option1 = request.form['option1']
+        option2 = request.form['option2']
+        # name = request.form['name']
+        detaillistOptions = request.form['detaillistOptions']
+        phone = request.form['phone']
+        comments = request.form['comments']
+        print(option1,option2,detaillistOptions,phone,comments)
+        
+        return render_template('index.html')
+    return render_template('index.html')
 @app.route('/process', methods=['POST'])
 def process():
     if request.method == 'POST':
@@ -37,14 +51,12 @@ def process():
         message = request.form['comments']
 
         cursor = db.cursor()
-        query = "INSERT INTO Messages (name, email, comments) VALUES (%s, %s,%s)"
+        query = "INSERT INTO Counseling(name, email, comments) VALUES (%s, %s,%s)"
         cursor.execute(query,(name,email,message))
 
         db.commit()
-#        cursor.execute("SELECT * FROM Messages")
-#        data = cursor.fetchall()
-
         cursor.close()
+
         return render_template('index.html')
     else:
         return render_template('index.html')
@@ -54,4 +66,4 @@ def process():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=8888, debug=True)
