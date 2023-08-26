@@ -45,10 +45,11 @@
 
   <div class="jumbotron text-center">
     <span><em>렌탈을 쉽게 시작하는 곳</em></span>
-    <h1 class="display-3">Rentalstart</h1>
+    <h1 class="display-3"><strong>Rentalstart</strong></h1>
     <p>최저가보다 최저가로 렌탈서비스 이용</p>
+    <a class="text-center" href="#" role="button">
+      <button type="button" class="btn">간편상담신청하기</button>
     <a class="text-center" href="/inquire" role="button">
-      <button type="button" class="btn btn-light">간편상담신청하기</button>
     </a>
   </div>
 
@@ -66,9 +67,23 @@
           5️⃣ 분할 납부 시작<br></h4>
         <p>전 제품을 합리적으로 구매하세요.❕</p>
         <br><button class="btn btn-light btn-sm">Get in Touch</button>
+      <div class="col-sm-7">
+        <h2>About 렌탈스타트</h2><br>
+        <h5>🟨 Rentalstart 이용 절차가 어떻게 되나요 ？</h5><br>
+        <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center">
+          ⓵ &emsp; 간편 상담 </div>
+        <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center">
+          ⓶ &emsp; 견적 제안 </div>
+        <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center">
+          ⓷ &ensp; 심사 및 계약 </div>
+        <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center">
+          ⓸ &ensp; 물품 공급 및 설치</div>
+        <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center">
+          ⓹ &ensp; 분할 납부 시작</div>
+        <p class="lead">전 제품을 합리적으로 구매하세요 ✔️</p>
       </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-ok logo"></span>
+      <div class="col-sm-5">
+        <img src="{{ url_for('static', filename='img/logo.png') }}">
       </div>
     </div>
   </div>
@@ -117,6 +132,69 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  <div id="myCarousel" class="carousel slide bg-grey text-center" data-ride="carousel">
+    <br><br>
+    <h2>사용자 후기</h2>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+      <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"넘 좋아요!"<br><span>김땡땡, 목포, 음식점</span></h4>
+      </div>
+      <div class="item">
+        <h4>"완전 싸요!!"<br><span>박땡땡, 서울, 중소기업</span></h4>
+      </div>
+      <div class="item">
+        <h4>"합리적 편리 간단"<br><span>강땡땡, 광주, 병원</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div id="portfolio" class="container-fluid text-center">
+    <h2>SERVICES</h2>
+    <h4>What we offer</h4>
+    <br>
+    <div class="slideanim mb-0">
+      <div class="d-flex align-items-center mb-4">
+          <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
+          <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">렌탈 품목</span></h3>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mb-4">
+          <div class="col mb-4 mb-md-0">
+          <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">TV/오디오
+            (TV, 프로젝터,하이엔드 오디오, 스피커) </div></div>
+          <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">주방가전
+            냉장고, 정수기, 식기세척기, 후드 전기레인지, 오븐/전자레인지, 쿠커
+            </div></div>
+          <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">생활가전
+            세탁기, 건조기, 에어드레서, 슈드레서, 에어컨, 공기청정기, 제습기, 청소기, 소형가전
+            </div></div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3">
+          <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">PC/주변기기
+            데스크탑, 갤럭시북, 프린터, 모니터
+            </div></div>
+          <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">의료기기</div></div>
+          <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">LED 조명</div></div>
+      </div>
+    </div>
+    
   </div>
 
   <!-- Container (Portfolio Section) -->
@@ -158,6 +236,11 @@
       <span class="glyphicon glyphicon-off logo-small"></span>
       <h4>POWER</h4>
       <p>1...</p>
+  <!-- Container (Services Section) -->
+  <div id="services" class="container-fluid bg-grey text-center">
+    <h2>렌탈을 시작하는 사람이라면</h2>
+    <h4>렌탈스타트로 가장 편리하고 합리적인 가격으로 시작해보세요</h4>
+    <br>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-heart logo-small"></span>
@@ -189,6 +272,7 @@
     </div>
   </div>
 </div>
+
 
   <!-- Container (Select Section) -->
   <div id="select" class="container-fluid">
@@ -228,16 +312,17 @@
           </div>
         </div>
       </div>
+  </div>
 
     <!-- Container (Contact Section) -->
     <div id="contact" class="container-fluid bg-grey">
       <h2 class="text-center">CONTACT</h2><br>
       <div class="row">
         <div class="col-sm-5">
-          <h3> 24시간 상담 문의 가능.&#x1F4E2</h3>
+          <h3> 24시간 상담 문의 가능 &#x1F4E2</h3>
           <p><span class="glyphicon glyphicon-map-marker"></span> Mokpo</p>
-          <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-          <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+          <p><span class="glyphicon glyphicon-phone"></span> +82 10-6537-1800</p>
+          <p><span class="glyphicon glyphicon-envelope"></span> waterseven7@naver.com</p>
         </div>
         <div class="col-sm-7 slideanim">
           <div class="row">
@@ -256,8 +341,15 @@
               </form>
             </div>
           </div>
+          </div><br>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+          <div class=".offset-md-9">
+          <button class="btn btn-outline-warning" type="submit">Send</button>
+          </div>
+        </form>
         </div>
       </div>
+      <br>
       <p>주문 확정과는 상관없이 렌탈스타트는 고객과 파트너간의 상담 경험을 적극 추천합니다.<br>
         무료 상담으로 진행되며 주문 확정 후 미계약 처리 시 결제가 이루어지지 않습니다. </p>
     </div>
