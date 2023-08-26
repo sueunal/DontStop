@@ -72,7 +72,7 @@ body {
     background-color: #ecec84;
     color: #fff;
     padding: 100px 25px;
-    font-family: "BM Plex Sans KR", sans-serif;
+    font-family: "GmarketSans", sans-serif;
   }
   .container-fluid {
     padding: 70px 60px ;
@@ -158,7 +158,6 @@ body {
     margin: 15px 0;
     background-color:  #a299ca;
     color: #fff;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   }
   .navbar {
     margin-bottom: 0;
@@ -169,7 +168,7 @@ body {
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
-    font-family: Montserrat, sans-serif;
+    font-family: "GmarketSans";
   }
   .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
@@ -177,7 +176,6 @@ body {
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #ecec84 !important;
     background-color: #fff !important;
-    text-decoration: none;
   }
   .navbar-default .navbar-toggle {
     border-color: transparent;
@@ -222,31 +220,4 @@ body {
     text-decoration: none; /* 링크의 밑줄 제거 */
     color: inherit; /* 링크의 색상 제거 */
   }
-  .list-inline {
-  padding-left: 0;
-  list-style: none;
-  }
-
-.list-inline-item {
-  display: inline-block;
-  }
-
-.social-link {
-  display: block;
-  text-decoration: none;
-  height: 4rem;
-  width: 4rem;
-  line-height: 4.3rem;
-  font-size: 1.5rem;
-  background-color: #a299ca;
-  transition: background-color 0.15s ease-in-out;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-}
-.social-link:hover {
-  background-color: #aaa;
-  text-decoration: none;
-}
-
-.rounded-circle {
-  border-radius: 50% !important;
-}
+  

@@ -40,16 +40,22 @@
               <h2 class="fw-bolder">간편 상담 신청</h2>
               <p class="lead fw-normal text-muted mb-0">전문 상담사를 연결해 드릴게요!</p>
           </div>
-         <form action="/inquire_process" method="post">
           <div class="row gx-5 justify-content-center">
               <div class="col-lg-8 col-xl-6">
-                        <p>필요한 물품을 선택해주세요!</p>
+                  <!-- * * * * * * * * * * * * * * *-->
+                  <!-- * * SB Forms Contact Form * *-->
+                  <!-- This form is pre-integrated with SB Forms.-->
+                  <!-- To make this form functional, sign up at-->
+                  <!-- https://startbootstrap.com/solution/contact-forms-->
+                  <!-- to get an API token!-->
+                  <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                      <p>필요한 물품을 선택해주세요!</p>
                       <div class="form-check mb-4">
                           <div class="checkbox">
-                              <label><input type="checkbox" name="option1" value="1">Option 1</label>
+                              <label><input type="checkbox" value="">Option 1</label>
                             </div>
                             <div class="checkbox">
-                              <label><input type="checkbox" name="option2" value="냉장고">Option 2</label>
+                              <label><input type="checkbox" value="">Option 2</label>
                             </div>
                       </div>
                       <p>사업의 형태가 어떻게 되시나요?</p>
@@ -61,7 +67,7 @@
 
                       <p>이름을 입력해주세요!</p>
                       <div class="form-floating mb-4">
-                        <input class="form-control" type="text" id="name" placeholder="Enter your name..." data-sb-validations="required" />
+                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                         <label for="name">Full name</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                       </div>
@@ -91,7 +97,7 @@
 
                       <p>문의하실 내용을 남겨주세요!</p>
                       <div class="form-floating mb-4">
-                          <textarea class="form-control" type="text" id="comments" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                          <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                           <label for="message">Message</label>
                           <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                       </div>
@@ -113,11 +119,11 @@
                       <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                       <!-- Submit Button-->
                       <div class="d-grid"><button class="btn btn-primary btn-lg abled" id="submitButton" type="submit">Submit</button></div>
+                  </form>
               </div>
           </div>
       </div>
   </div>
-                  </form>
 </section>
 
 <!-- 사업자명, 직책, 문의유형, 필요물품, 아이디, 이름, -->
