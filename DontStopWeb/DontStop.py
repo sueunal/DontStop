@@ -29,6 +29,11 @@ def index():
 def inquire():
     return render_template('inquire.html')
 
+@app.route('/inquire_process', methods=['post'])
+def inquire_process():
+
+    return render_template('index.html')
+
 @app.route('/process', methods=['POST'])
 def process():
     if request.method == 'POST':
@@ -41,17 +46,11 @@ def process():
         cursor.execute(query,(name,email,message))
 
         db.commit()
-#        cursor.execute("SELECT * FROM Messages")
-#        data = cursor.fetchall()
-
         cursor.close()
         return render_template('index.html')
     else:
         return render_template('index.html')
     
-
-
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8888, debug=True)
