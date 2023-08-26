@@ -72,7 +72,7 @@ body {
     background-color: #ecec84;
     color: #fff;
     padding: 100px 25px;
-    font-family: "BM Plex Sans KR", sans-serif;
+    font-family: "GmarketSans", sans-serif;
   }
   .container-fluid {
     padding: 70px 60px ;
@@ -168,7 +168,7 @@ body {
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
-    font-family: Montserrat, sans-serif;
+    font-family: "GmarketSans";
   }
   .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
