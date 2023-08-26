@@ -18,31 +18,17 @@ app = Flask(__name__)
 # )
 # """
 
-db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
+# db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 
 
 @app.route('/', methods= ['POST','GET'])
 def index():
     return render_template('index.html')
 
-
 @app.route('/inquire', methods=['GET'])
 def inquire():
     return render_template('inquire.html')
 
-@app.route('/inquire_process', methods=['POST'])
-def inquire_process():
-    if request.method == 'POST':
-        option1 = request.form['option1']
-        option2 = request.form['option2']
-        # name = request.form['name']
-        detaillistOptions = request.form['detaillistOptions']
-        phone = request.form['phone']
-        comments = request.form['comments']
-        print(option1,option2,detaillistOptions,phone,comments)
-        
-        return render_template('index.html')
-    return render_template('index.html')
 @app.route('/process', methods=['POST'])
 def process():
     if request.method == 'POST':
@@ -55,8 +41,10 @@ def process():
         cursor.execute(query,(name,email,message))
 
         db.commit()
-        cursor.close()
+#        cursor.execute("SELECT * FROM Messages")
+#        data = cursor.fetchall()
 
+        cursor.close()
         return render_template('index.html')
     else:
         return render_template('index.html')
