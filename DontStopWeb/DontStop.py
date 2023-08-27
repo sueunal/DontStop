@@ -4,20 +4,6 @@ import pymysql
 
 
 app = Flask(__name__)
-# """
-# app.config['MYSQL_HOST'] = 'localhost'
-# app.config['MYSQL_USER'] = 'DontStop'
-# app.config['MYSQL_PASSWORD'] = 'vip0818!'
-# app.config['MYSQL_DB'] = 'DontStop'
-
-# mysql = pymysql.connect(
-#     host=app.config['MYSQL_HOST'],
-#     user=app.config['MYSQL_USER'],
-#     password=app.config['MYSQL_PASSWORD'],
-#     db=app.config['MYSQL_DB']
-# )
-# """
-
 db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 
 
@@ -39,7 +25,7 @@ def inquire_process():
         email = request.form['email']
         phone = request.form['phone']
         comment = request.form['comment']
-        print(duty) 
+
         cursor = db.cursor()
         query = "INSERT INTO Simple_Counseling(name, phone, duty, email, comment, item, business) VALUES (%s,%s,%s,%s,%s,%s,%s)"
         cursor.execute(query,(name,phone,duty,email,comment,item,business))
