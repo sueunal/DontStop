@@ -33,92 +33,88 @@
 <!-- Page content-->
 <section class="py-5">
   <div class="container px-5">
-      <!-- Contact form-->
-      <div class="bg-light rounded-4 py-5 px-4 px-md-5">
-          <div class="text-center mb-5">
-              <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
-              <h2 class="fw-bolder">간편 상담 신청</h2>
-              <p class="lead fw-normal text-muted mb-0">전문 상담사를 연결해 드릴게요!</p>
-          </div>
-          <div class="row gx-5 justify-content-center">
-              <div class="col-lg-8 col-xl-6">
-                <form action="/inquire_process" method="post"> 
-                  <div class="col-sm-6 form-group">
-                      <p>필요한 물품을 선택해주세요!</p>
-                      <div class="form-check mb-4">
-                          <div class="checkbox">
-                              <label><input type="checkbox" name="checkOptions" value="에어컨">에어컨</label>
-                            </div>
-                            <div class="checkbox">
-                              <label><input type="checkbox" name="checkOptions" value="냉장고">냉장고</label>
-                            </div>
-                      </div>
-                      <p>사업의 형태가 어떻게 되시나요?</p>
-                      <div class="form-control mb-4">
-                        <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자">개인사업자</label>
-                        <label class="radio-inline"><input type="radio" name="radioOptions" value="법인사업자">법인사업자</label>
-                        <label class="radio-inline"><input type="radio" name="radioOptions" value="없음">없음</label>
-                      </div>
+    <!-- Contact form-->
+    <div class="bg-light py-5 px-10 m-5">
+      <div class="text-center mb-5">
+          <h2 class="fw-bolder">간편 상담 신청</h2>
+          <p class="lead fw-normal text-muted mb-0">전문 상담사를 연결해 드릴게요!</p>
+      </div>
 
-                      <p>이름을 입력해주세요!</p>
-                      <div class="form-floating mb-4">
-                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required/>
-                        <label for="name">Full name</label>
-                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                      </div>
+      <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-8">
+            <form action="/inquire_process" method="post"> 
+              <div class="col-sm-10 form-group">
+                <p><em>* </em> 필요한 물품을 선택해주세요!</p>
+                <div class="form-check mb-4">
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="checkOptions" value="에어컨">에어컨</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="checkOptions" value="냉장고">냉장고</label>
+                  </div>
+                </div>
 
-                      <p>직책을 선택해주세요!</p>
-                        <input class="form-control mb-4" list="datalistOptions" id="exampleDataList" name="list" placeholder="Type to position" required>
-                        <datalist id="datalistOptions">
-                          <option name="one" value="사장">
-                          <option  name="two"value="점장">
-                          <option  name="three" value="매니저">
-                        </datalist>
+                <p><em>* </em> 사업의 형태가 어떻게 되시나요?</p>
+                <div class="form-control mb-4">
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자">개인사업자</label>
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="법인사업자">법인사업자</label>
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="없음">없음</label>
+                </div>
 
-                      <p>이메일을 입력해주세요!</p>
-                      <div class="form-floating mb-4">
-                          <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" required/>
-                          <label for="email">Email address</label>
-                          <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                          <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                      </div>
-                      <p>핸드폰 번호를 입력해주세요!</p>
-                      <div class="form-floating mb-4">
-                          <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" required/>
-                          <label for="phone">Phone number</label>
-                          <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                      </div>
+                <p><em>* </em> 이름을 입력해주세요!</p>
+                <div class="form-floating mb-4">
+                  <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required/>
+                  <label for="name">Full name</label>
+                  <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                </div>
 
-                      <p>문의하실 내용을 남겨주세요!</p>
-                      <div class="form-floating mb-4">
-                          <textarea class="form-control" id="message" name="comment" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" required></textarea>
-                          <label for="message">Message</label>
-                          <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                      </div>
-                      <!-- Submit success message-->
-                      <!-- This is what your users will see when the form-->
-                      <!-- has successfully submitted-->
-                      <div class="d-none" id="submitSuccessMessage">
-                          <div class="text-center mb-3">
-                              <div class="fw-bolder">Form submission successful!</div>
-                              To activate this form, sign up at
-                              <br />
-                              <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                          </div>
-                      </div>
-                      <!-- Submit error message-->
-                      <!---->
-                      <!-- This is what your users will see when there is-->
-                      <!-- an error submitting the form-->
-                      <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                      <!-- Submit Button-->
-                      <div class="d-grid"><button class="btn btn-primary btn-lg abled" id="submitButton" type="submit">Submit</button></div>
-                  </form>
+                <p><em>* </em> 직책을 선택해주세요!</p>
+                  <input class="form-control mb-4" list="datalistOptions" id="exampleDataList" name="list" placeholder="Type to position" required>
+                  <datalist id="datalistOptions">
+                    <option name="one" value="사장">
+                    <option  name="two"value="점장">
+                    <option  name="three" value="매니저">
+                  </datalist>
+
+                <p><em>* </em> 핸드폰 번호를 입력해주세요!</p>
+                <div class="form-floating mb-4">
+                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" required/>
+                    <label for="phone">Phone number</label>
+                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                </div>
+
+                <p>이메일을 입력해주세요!</p>
+                <div class="form-floating mb-4">
+                    <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" required/>
+                    <label for="email">Email address</label>
+                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                </div>
+
+                <p><em>* </em> 문의하실 내용을 남겨주세요!</p>
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" id="message" name="comment" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" required></textarea>
+                    <label for="message">Message</label>
+                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                </div>
+
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                        To activate this form, sign up at<br>
+                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                    </div>
+                </div>
+                <!-- Submit error message-->
+                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                <!-- Submit Button-->
+                <div class="d-grid"><button class="btn btn-primary btn-lg abled" id="submitButton" type="submit">Submit</button></div>
+            </form>
               </div>
           </div>
       </div>
+      </div>
   </div>
-</form>
 </section>
 
 <!-- 사업자명, 직책, 문의유형, 필요물품, 아이디, 이름, -->
