@@ -34,10 +34,10 @@
 <section class="py-5">
   <div class="container px-5">
     <!-- Contact form-->
-    <div class="bg-light py-5 px-10 m-5">
+    <div class="bg-light py-5 px-10">
       <div class="text-center mb-5">
-          <h2 class="fw-bolder">간편 상담 신청</h2>
-          <p class="lead fw-normal text-muted mb-0">전문 상담사를 연결해 드릴게요 ! </p>
+        <h2 class="fw-bolder">간편 상담 신청</h2>
+        <p class="lead fw-normal text-muted mb-0">전문 상담사를 연결해 드릴게요 ! </p>
       </div>
       
       <div class="row justify-content-center">
@@ -45,13 +45,13 @@
             <form action="/inquire_process" method="post"> 
               <div class="form-group" data-bs-toggle="buttons">
                 <label for="input_radio" class="form-label"><p> 필요한 물품을 선택해주세요! <span style="color: purple; font-size:x-large;" >*</span></p></label>
-                <div class="form-check mb-4">
-                  <input type="checkbox" class="btn-check" id="btn-check1" checked autocomplete="off">
+                <!-- <div class="form-check mb-4">
+                  <input type="checkbox" class="btn-check" id="btn-check1" name="checkOptions">
                   <label class="btn" for="btn-check1">에어컨</label>
-                  <input type="checkbox" class="btn-check" id="btn-check2" checked autocomplete="off">
-                  <label class="btn" for="btn-check2">냉장고</label>
-                </div>
-                  <!-- <div class="checkbox">
+                  <input type="checkbox" class="btn-check" id="btn-check2" name="checkOptions">
+                  <label class="btn" name="checkOptions" for="btn-check2">냉장고</label>
+                </div> -->
+                  <div class="checkbox">
                     <label><input type="checkbox" name="checkOptions" value="에어컨">에어컨</label>
                   </div>
                   <div class="checkbox">
@@ -60,9 +60,9 @@
 
                 <label for="input_radio" class="form-label"><p> 사업의 형태가 어떻게 되시나요? <span style="color: purple; font-size:x-large;" >*</span> </p></label>
                 <div class="form-control mb-4">
-                  <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자"> 개인사업자 &emsp; </label>
-                  <label class="radio-inline"><input type="radio" name="radioOptions" value="법인사업자"> 법인사업자 &emsp;</label>
-                  <label class="radio-inline"><input type="radio" name="radioOptions" value="없음"> 없음 </label>
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자">개인사업자</label>
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="법인사업자">법인사업자</label>
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="없음">없음</label>
                 </div>
 
                 <label for="input_radio" class="form-label"><p> 이름을 입력해주세요! <span style="color: purple; font-size:x-large;" >*</span></p></label>
@@ -73,7 +73,7 @@
                 </div>
 
                 <label for="input_radio" class="form-label"><p> 직책을 선택해주세요! <span style="color: purple; font-size:x-large;" >*</span></p></label>
-                  <input class="form-control mb-4" list="datalistOptions" id="exampleDataList" name="list" placeholder="Type to position" required>
+                  <input class="form-control mb-4 p-3" list="datalistOptions" id="exampleDataList" name="list" placeholder="Type to position" required>
                   <datalist id="datalistOptions">
                     <option name="one" value="사장">
                     <option  name="two"value="점장">
@@ -120,11 +120,11 @@
       </div>
   </div>
 </section>
-
 <!-- 사업자명, 직책, 문의유형, 필요물품, 아이디, 이름, -->
 
 
 <footer class="container-fluid text-center">
+  <img src="{{ url_for('static', filename='img/Rentalstart.png') }}" width="347" height="100">
   <ul class="list-inline mb-5">
     <li class="list-inline-item">
       <a class="social-link rounded-circle" href="#!"><i class="icon-social-facebook"></i></a>
