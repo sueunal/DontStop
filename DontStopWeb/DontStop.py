@@ -4,7 +4,7 @@ import pymysql
 
 
 app = Flask(__name__)
-# db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
+db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 
 
 @app.route('/', methods= ['POST','GET'])
@@ -18,7 +18,7 @@ def inquire():
 @app.route('/inquire_process', methods=['post'])
 def inquire_process():
     if request.method == 'POST':
-        item = request.form.getlist('checkOptions')
+        item = request.form['checkOptions']
         name = request.form['name']
         business = request.form['radioOptions']
         duty = request.form['list']
