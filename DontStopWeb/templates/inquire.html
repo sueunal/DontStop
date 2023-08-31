@@ -45,11 +45,11 @@
             <form action="/inquire_process" method="post"> 
               <div class="form-group" data-bs-toggle="buttons">
                 <label for="input_radio" class="form-label"><p> 필요한 물품을 선택해주세요! <span style="color: purple; font-size:x-large;" >*</span></p></label>
-                <div class="form-check mb-4">
-                  <input type="checkbox" class="btn-check" id="btn-check1" checked autocomplete="off">
-                  <label class="btn" for="btn-check1">에어컨</label>
-                  <input type="checkbox" class="btn-check" id="btn-check2" checked autocomplete="off">
-                  <label class="btn" for="btn-check2">냉장고</label>
+                <div class="checkbox mb-4">
+                  <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off" required>
+                  <label class="btn" for="btn-check1" value="에어컨">에어컨</label>
+                  <input type="checkbox" class="btn-check" id="btn-check2" autocomplete="off">
+                  <label class="btn" for="btn-check2" value="냉장고">냉장고</label>
                 </div>
                   <!-- <div class="checkbox">
                     <label><input type="checkbox" name="checkOptions" value="에어컨">에어컨</label>
@@ -59,8 +59,8 @@
                   </div> -->
 
                 <label for="input_radio" class="form-label"><p> 사업의 형태가 어떻게 되시나요? <span style="color: purple; font-size:x-large;" >*</span> </p></label>
-                <div class="form-control mb-4">
-                  <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자"> 개인사업자 &emsp; </label>
+                <div class="form-control mb-4 p-3">
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자" required> 개인사업자 &emsp; </label>
                   <label class="radio-inline"><input type="radio" name="radioOptions" value="법인사업자"> 법인사업자 &emsp;</label>
                   <label class="radio-inline"><input type="radio" name="radioOptions" value="없음"> 없음 </label>
                 </div>
@@ -73,7 +73,7 @@
                 </div>
 
                 <label for="input_radio" class="form-label"><p> 직책을 선택해주세요! <span style="color: purple; font-size:x-large;" >*</span></p></label>
-                  <input class="form-control mb-4" list="datalistOptions" id="exampleDataList" name="list" placeholder="Type to position" required>
+                  <input class="form-control mb-4 p-3" list="datalistOptions" id="exampleDataList" name="list" placeholder="Type to position" required>
                   <datalist id="datalistOptions">
                     <option name="one" value="사장">
                     <option  name="two"value="점장">
