@@ -96,21 +96,21 @@
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active">
+      <div class="carousel-item active" data-bs-interval="2000">
         <img src="{{ url_for('static', filename='img/insurance.png') }}" class="d-block w-10 mx-auto" alt="이미지">
         <div class="carousel-caption d-none d-md-block">
           <h5>"넘 좋아요!"</h5>
           <p>김땡땡, 목포, 음식점.</p>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" data-bs-interval="2000">
         <img src="{{ url_for('static', filename='img/air-purifier.png') }}" class="d-block w-10 mx-auto" alt="이미지">
         <div class="carousel-caption d-none d-md-block">
           <h5>"완전 싸요!!"</h5>
           <p>땡땡, 서울, 중소기.</p>
         </div>
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" data-bs-interval="2000">
         <img src="{{ url_for('static', filename='img/service.png') }}" class="d-block w-10 mx-auto" alt="이미지">
         <div class="carousel-caption d-none d-md-block">
           <h5>>"합리적 편리 간단"</h5>
