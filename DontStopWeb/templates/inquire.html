@@ -10,7 +10,9 @@
   <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
   <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/simple-line-icons.min.css') }}">     <!-- Simple line icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script src="/static/js/jquery.min.js"></script>
@@ -21,7 +23,9 @@
 <body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
     <nav class="navbar navbar-expand-sm">
     <div class="container">
-      <a class="navbar-brand" href="/">Rentalstart</a>
+      <a class="navbar-brand" href="/">
+        <img src="{{ url_for('static', filename='img/favicon.ico') }}" width="40" height="40"> Rentalstart
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,13 +47,11 @@
             <form action="/inquire_process" method="post"> 
               <div class="form-group" data-bs-toggle="buttons">
                 <label for="input_radio" class="form-label"><h5> 필요한 물품을 선택해주세요! <span style="color: purple; font-size:x-large;" >*</span></h5></label>
-                 <div class="form-check mb-4">
-                  <div class="checkbox ">
-                    <label><input type="checkbox" name="checkOptions" value="에어컨"> 에어컨</label>
-                  </div>
-                  <div class="checkbox">
+                 <div class="form-control mb-4">
+                  <div class="form-check-inline">
+                    <label><input type="checkbox" name="checkOptions" value="에어컨"> 에어컨 &emsp;</label>
                     <label><input type="checkbox" name="checkOptions" value="냉장고"> 냉장고</label>
-                  </div> 
+                  </div>
                 </div> 
 
                 <!-- <div class="form-check mb-4">
@@ -169,6 +171,27 @@ $(document).ready(function(){
     });
   });
 })
+
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  $(function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
 </script>
 
 </body>
