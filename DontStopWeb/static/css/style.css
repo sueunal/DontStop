@@ -114,7 +114,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: "Montserrat";
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -266,7 +266,7 @@ h4 {
   line-height: 1.42857143 !important;
   letter-spacing: 4px;
   border-radius: 0;
-  font-family: "GmarketSans";
+  font-family: "Montserrat";
 }
 
 .navbar li a,
