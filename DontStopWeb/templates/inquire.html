@@ -10,7 +10,7 @@
   <link href="/static/css/FontsLato.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
   <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
   <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/simple-line-icons.min.css') }}">     <!-- Simple line icons -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -45,18 +45,22 @@
             <form action="/inquire_process" method="post"> 
               <div class="form-group" data-bs-toggle="buttons">
                 <label for="input_radio" class="form-label"><p> 필요한 물품을 선택해주세요! <span style="color: purple; font-size:x-large;" >*</span></p></label>
+                
                 <!-- <div class="form-check mb-4">
                   <input type="checkbox" class="btn-check" id="btn-check1" name="checkOptions">
                   <label class="btn" for="btn-check1">에어컨</label>
                   <input type="checkbox" class="btn-check" id="btn-check2" name="checkOptions">
                   <label class="btn" name="checkOptions" for="btn-check2">냉장고</label>
-                </div> -->
-                  <div class="checkbox">
-                    <label><input type="checkbox" name="checkOptions" value="에어컨">에어컨</label>
+                </div> 버튼으로 꾸미고 싶었지만 실패-->
+
+                 <div class="form-check mb-4">
+                  <div class="checkbox ">
+                    <label><input type="checkbox" name="checkOptions" value="에어컨"> 에어컨</label>
                   </div>
                   <div class="checkbox">
-                    <label><input type="checkbox" name="checkOptions" value="냉장고">냉장고</label>
-                  </div> -->
+                    <label><input type="checkbox" name="checkOptions" value="냉장고"> 냉장고</label>
+                  </div> 
+                </div> 
 
                 <label for="input_radio" class="form-label"><p> 사업의 형태가 어떻게 되시나요? <span style="color: purple; font-size:x-large;" >*</span> </p></label>
                 <div class="form-control mb-4">

@@ -10,7 +10,7 @@
   <link href="/static/css/FontsLato.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.google.com/specimen/IBM+Plex+Sans+KR?hl=ko&subset=korean" rel="stylesheet" type="text/css">
   <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
   <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/simple-line-icons.min.css') }}">     <!-- Simple line icons -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -54,7 +54,7 @@
 
   <!-- Container (About Section) -->
   <div id="about" class="container-fluid">
-    <div class="row slideanim">
+    <div class="row">
       <div class="col-sm-7">
         <h2>About 렌탈스타트</h2><br>
         <h5>🟨 Rentalstart 이용 절차가 어떻게 되나요 ？</h5><br>
@@ -71,7 +71,7 @@
         <p class="lead">전 제품을 합리적으로 구매하세요 ✔️</p>
       </div>
       <div class="col-sm-5">
-        <img src="{{ url_for('static', filename='img/logo.png') }}">
+        <img src="{{ url_for('static', filename='img/rs_triangle.png') }}">
       </div>
     </div>
   </div>
@@ -263,12 +263,11 @@
           </li>
         </ul>
         <p class="text-muted small mb-0">Copyright &copy; 멈추지마 ALL RIGHTS RESERVED.</p>
-        <span>상호명 : 멈추지마
-              대표 김태호
-              사업자등록번호 531-69-00457
-              통신판매업신고 2023-전남무안-0078
-              e-mail xogh5525@naver.com
-              전라남도 무안군 삼향읍 영산로 1028 1층 (우 : 58560)</span>
+        <p class="text-muted small mb-0">상호명 : 멈추지마 (Don't Stop)</p>
+        <p class="text-muted small mb-0">대표 : 김태호</p>
+        <p class="text-muted small mb-0">사업자등록번호 : 531-69-00457</p>
+        <p class="text-muted small mb-0">e-mail : xogh5525@naver.com</p>
+        <p class="text-muted small mb-0">전라남도 무안군 삼향읍 영산로 1028 1층 (우 : 58560)</p>
     </footer>
 
 

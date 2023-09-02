@@ -141,7 +141,7 @@ h4 {
 }  
 
 .jumbotron {
-  background-color: #fff;
+  background-color: var(--bs-gray-100);
   color: var(--bs-purple);
   padding: 100px 25px;
   font-family: "GmarketSans", sans-serif;
@@ -152,7 +152,7 @@ h4 {
 }
 
 .bg-grey {
-  background-color: #f6f6f6;
+  background-color: var(--bs-gray-100);
 }
 
 .logo-small {
@@ -259,7 +259,7 @@ h4 {
 
 .navbar {
   margin-bottom: 0;
-  background-color: #F4DD4E;
+  background-color: var(--bs-gray-100);
   z-index: 9999;
   border: 0;
   font-size: 17px !important;
@@ -271,18 +271,18 @@ h4 {
 
 .navbar li a,
 .navbar .navbar-brand {
-  color: #fff !important;
+  color: var(--bs-purple) !important;
 }
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-  color: #F4DD4E !important;
+  color: var(--bs-purple) !important;
   background-color: #fff !important;
 }
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
-  color: #fff !important;
+  color: var(--bs-purple) !important;
 }
 
 footer .glyphicon {
