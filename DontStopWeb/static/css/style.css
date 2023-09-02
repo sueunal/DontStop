@@ -112,6 +112,19 @@
   }
 }
 
+ /* Keyframes를 사용하여 이미지를 위아래로 움직이는 애니메이션 정의 */
+ @keyframes moveUpDown {
+  0% {
+    transform: translateY(0); /* 초기 위치 */
+  }
+  50% {
+    transform: translateY(-20px); /* 중간 위치 */
+  }
+  100% {
+    transform: translateY(0); /* 최종 위치 (원래 위치로 돌아감) */
+  }
+}
+
 body {
   margin: 0;
   font-family: "Montserrat";
@@ -285,7 +298,7 @@ h4 {
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-  color: #ffcc00 !important;
+  color: var(--bs-teal) !important;
   background-color: var(--bs-gray-100) !important;
 }
 
@@ -295,9 +308,13 @@ h4 {
 }
 
 footer .glyphicon {
-  font-size: 20px;
+  font-size: 10px;
   margin-bottom: 20px;
   color: #ecec84;
+}
+
+footer {
+  font-size: 10px;
 }
 
 .slideanim {
@@ -401,4 +418,9 @@ a {
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
+}
+
+ /* 애니메이션 적용 스타일 */
+.animated-image {
+  animation: moveUpDown 2s infinite; /* 2초 간격으로 반복 */
 }

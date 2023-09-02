@@ -45,12 +45,13 @@
       <div class="row justify-content-center">
           <div class="col-sm-10 col-lg-10">
             <form action="/inquire_process" method="post"> 
-              <div class="form-group" data-bs-toggle="buttons">
-                <label for="input_radio" class="form-label"><h5> 필요한 물품을 선택해주세요! <span style="color: purple; font-size:x-large;" >*</span></h5></label>
-                 <div class="form-control mb-4">
+              <div class="form-group px-2" data-bs-toggle="buttons">
+                <label for="input_radio" class="form-label"><h5> 필요한 물품을 선택해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
+                 <div class="form-control mb-3">
                   <div class="form-check-inline">
-                    <label><input type="checkbox" name="checkOptions" value="에어컨"> 에어컨 &emsp;</label>
+                    <label><input type="checkbox" name="checkOptions" value="에어컨" required> 에어컨 &emsp;</label>
                     <label><input type="checkbox" name="checkOptions" value="냉장고"> 냉장고</label>
+                  <!-- 체크 안되면 체크해달라는 문구가 뜨게 해야함. 데이터가 올바르게 디비에 전송되는지 확인해야함. -->
                   </div>
                 </div> 
 
@@ -61,21 +62,21 @@
                   <label class="btn" name="checkOptions" for="btn-check2">냉장고</label>
                 </div> 버튼으로 꾸미고 싶었지만 실패-->
 
-                <label for="input_radio" class="form-label"><h5> 사업의 형태가 어떻게 되시나요? <span style="color: purple; font-size:x-large;" >*</span> </h5></label>
+                <label for="input_radio" class="form-label"><h5> 사업의 형태가 어떻게 되시나요? <span style="color: teal; font-size:x-large;" >*</span> </h5></label>
                 <div class="form-control mb-4">
-                  <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자"> 개인사업자 &emsp; </label>
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자" required> 개인사업자 &emsp; </label>
                   <label class="radio-inline"><input type="radio" name="radioOptions" value="법인사업자"> 법인사업자 &emsp; </label>
                   <label class="radio-inline"><input type="radio" name="radioOptions" value="없음"> 없음</label>
                 </div>
 
-                <label for="input_radio" class="form-label"><h5> 이름을 입력해주세요! <span style="color: purple; font-size:x-large;" >*</span></h5></label>
+                <label for="input_radio" class="form-label"><h5> 이름을 입력해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
                 <div class="form-floating mb-4">
                   <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required/>
                   <label for="name">Full name</label>
                   <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                 </div>
 
-                <label for="input_radio" class="form-label"><h5> 직책을 선택해주세요! <span style="color: purple; font-size:x-large;" >*</span></h5></label>
+                <label for="input_radio" class="form-label"><h5> 직책을 선택해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
                   <input class="form-control mb-4 p-3" list="datalistOptions" id="exampleDataList" name="list" placeholder="Type to position" required>
                   <datalist id="datalistOptions">
                     <option name="one" value="사장">
@@ -83,7 +84,7 @@
                     <option  name="three" value="매니저">
                   </datalist>
 
-                  <label for="input_radio" class="form-label"><h5> 핸드폰 번호를 입력해주세요! <span style="color: purple; font-size:x-large;" >*</span></h5></label>
+                  <label for="input_radio" class="form-label"><h5> 핸드폰 번호를 입력해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
                 <div class="form-floating mb-4">
                     <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" required/>
                     <label for="phone">Phone number</label>
@@ -98,7 +99,7 @@
                     <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                 </div>
 
-                <label for="input_radio" class="form-label"><h5> 문의하실 내용을 남겨주세요! <span style="color: purple; font-size:x-large;" >*</span></h5></label>
+                <label for="input_radio" class="form-label"><h5> 문의하실 내용을 남겨주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
                 <div class="form-floating mb-4">
                     <textarea class="form-control" id="message" name="comment" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" required></textarea>
                     <label for="message">Message</label>
@@ -127,13 +128,18 @@
 
 
 <footer class="container-fluid text-center">
-  <img src="{{ url_for('static', filename='img/Rentalstart.png') }}" width="347" height="100">
-  <ul class="list-inline mb-5">
+  <img src="{{ url_for('static', filename='img/rs-gradation.png') }}" width="100" height="100">
+  <!-- <ul class="list-inline mb-5">
     <li class="list-inline-item">
       <a class="social-link rounded-circle" href="#!"><i class="icon-social-facebook"></i></a>
     </li>
-  </ul>
-      <p class="text-muted small mb-0">Copyright &copy; 멈추지마</p>  
+  </ul> -->
+  <p class="text-muted small mb-0">Copyright &copy; 멈추지마 ALL RIGHTS RESERVED.</p>
+  <p class="text-muted small mb-0">상호명 : 멈추지마 (Don't Stop)</p>
+  <p class="text-muted small mb-0">대표 : 김태호</p>
+  <p class="text-muted small mb-0">사업자등록번호 : 531-69-00457</p>
+  <p class="text-muted small mb-0">e-mail : xogh5525@naver.com</p>
+  <p class="text-muted small mb-0">전라남도 무안군 삼향읍 영산로 1028 1층 (우 : 58560)</p>
 </footer>
 
 <script>
