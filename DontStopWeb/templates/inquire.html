@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <title>렌탈스타트</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="/static/css/Montserrat.css">
-  <link href="/static/css/Montserrat.css" rel="stylesheet" type="text/css">
-  <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
-  <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
-  <script src="/static/js/bootstrap.bunble.min.js"></script>
-</head>
-
+{% extends 'index.html' %}
+{% block content %}
 <body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
     <nav class="navbar navbar-expand-sm">
     <div class="container">
@@ -199,6 +179,6 @@ $(document).ready(function(){
       })
   })()
 </script>
-
+{% endblock %}
 </body>
 </html>
