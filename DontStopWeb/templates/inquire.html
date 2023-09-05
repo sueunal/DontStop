@@ -1,5 +1,5 @@
 {% extends 'index.html' %}
-{% block content %}
+{% block content1 %}
 <body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
     <nav class="navbar navbar-expand-sm">
     <div class="container">
@@ -12,6 +12,7 @@
     </div>
     </nav>
 
+    {% block content2 %}
 <!-- Page content-->
 <section class="py-5">
   <div class="container px-5">
@@ -29,8 +30,8 @@
                 <label for="input_radio" class="form-label"><h5> 필요한 물품을 선택해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
                  <div class="form-control mb-3">
                   <div class="form-check-inline">
-                    <label><input type="checkbox" name="checkOptions" value="에어컨" required> 에어컨 &emsp;</label>
-                    <label><input type="checkbox" name="checkOptions" value="냉장고"> 냉장고</label>
+                    <label><input type="checkbox" name="checkOptions" value="첫번재값" required> 첫번재값 &emsp;</label>
+                    <label><input type="checkbox" name="checkOptions" value="두번째값"> 두번째값 </label>
                   <!-- 체크 안되면 체크해달라는 문구가 뜨게 해야함. 데이터가 올바르게 디비에 전송되는지 확인해야함. -->
                   </div>
                 </div> 
@@ -41,6 +42,8 @@
                   <input type="checkbox" class="btn-check" id="btn-check2" name="checkOptions">
                   <label class="btn" name="checkOptions" for="btn-check2">냉장고</label>
                 </div> 버튼으로 꾸미고 싶었지만 실패-->
+                {% endblock %}
+
 
                 <label for="input_radio" class="form-label"><h5> 사업의 형태가 어떻게 되시나요? <span style="color: teal; font-size:x-large;" >*</span> </h5></label>
                 <div class="form-control mb-4">

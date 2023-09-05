@@ -25,7 +25,7 @@
   <meta property="og:type" content="website">
 </head>
 
-{% block content %}
+{% block content1 %}
 <body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
     <nav class="navbar navbar-expand-sm">
     <div class="container">
@@ -198,12 +198,12 @@
       <div class="row slideanim text-center">
         <div class="col-sm-4">
           <div class="panel-footer">
-            <a href="{{url_for('inquire')}}" class="btn btn-lg" role="button">음식점</a>
+            <a href="{{url_for('inquire_food')}}" class="btn btn-lg" role="button">음식점</a>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="panel-footer">
-            <button class="btn btn-lg">카페</button>
+            <a href="{{url_for('inquire_cafe')}}" class="btn btn-lg" role="button">카페</a>
           </div>
         </div>
         <div class="col-sm-4">
