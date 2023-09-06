@@ -15,6 +15,14 @@ def index():
 def inquire():
     return render_template('inquire.html')
 
+@app.route('/inquire_food', methods=['GET'])
+def inquire_food():
+    return render_template('inquire_food.html')
+
+@app.route('/inquire_cafe', methods=['GET'])
+def inquire_cafe():
+    return render_template('inquire_cafe.html')
+
 @app.route('/inquire_process', methods=['post'])
 def inquire_process():
     if request.method == 'POST':

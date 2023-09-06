@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <title>렌탈스타트</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="/static/css/Montserrat.css">
-  <link href="/static/css/Montserrat.css" rel="stylesheet" type="text/css">
-  <link href="/static/css/GmarketSans.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" /> <!-- Favicon. 상단 탭에 보여지는 이미지-->
-  <script src="/static/js/all.js" crossorigin="anonymous"></script> <!-- Font Awesome icons (free version)-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
-  <script src="/static/js/bootstrap.bunble.min.js"></script>
-</head>
-
+{% extends 'index.html' %}
+{% block content1 %}
 <body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
     <nav class="navbar navbar-expand-sm">
     <div class="container">
@@ -32,6 +12,7 @@
     </div>
     </nav>
 
+    {% block content2 %}
 <!-- Page content-->
 <section class="py-5">
   <div class="container px-5">
@@ -49,8 +30,8 @@
                 <label for="input_radio" class="form-label"><h5> 필요한 물품을 선택해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
                  <div class="form-control mb-3">
                   <div class="form-check-inline">
-                    <label><input type="checkbox" name="checkOptions" value="에어컨" required> 에어컨 &emsp;</label>
-                    <label><input type="checkbox" name="checkOptions" value="냉장고"> 냉장고</label>
+                    <label><input type="checkbox" name="checkOptions" value="첫번재값" required> 첫번재값 &emsp;</label>
+                    <label><input type="checkbox" name="checkOptions" value="두번째값"> 두번째값 </label>
                   <!-- 체크 안되면 체크해달라는 문구가 뜨게 해야함. 데이터가 올바르게 디비에 전송되는지 확인해야함. -->
                   </div>
                 </div> 
@@ -61,6 +42,8 @@
                   <input type="checkbox" class="btn-check" id="btn-check2" name="checkOptions">
                   <label class="btn" name="checkOptions" for="btn-check2">냉장고</label>
                 </div> 버튼으로 꾸미고 싶었지만 실패-->
+                {% endblock %}
+
 
                 <label for="input_radio" class="form-label"><h5> 사업의 형태가 어떻게 되시나요? <span style="color: teal; font-size:x-large;" >*</span> </h5></label>
                 <div class="form-control mb-4">
@@ -199,6 +182,6 @@ $(document).ready(function(){
       })
   })()
 </script>
-
+{% endblock %}
 </body>
 </html>
