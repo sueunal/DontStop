@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitor IP Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Visitor IP Addresses</h1>
+    <canvas id="ipChart" width="400" height="200"></canvas>
+    <script>
+        var ctx = document.getElementById('ipChart').getContext('2d');
+        var visitor_ips = {{ visitor_ips | tojson }};
+        var ipCounts = {};
+        visitor_ips.forEach(function(ip) {
+            ipCounts[ip] = (ipCounts[ip] || 0) + 1;
+        });
+        var ips = Object.keys(ipCounts);
+        var counts = Object.values(ipCounts);
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ips,
+                datasets: [{
+                    label: 'Visitor IP Counts',
+                    data: counts,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
