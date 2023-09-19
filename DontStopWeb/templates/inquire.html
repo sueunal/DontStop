@@ -1,17 +1,7 @@
 {% extends 'index.html' %}
-{% block content1 %}
-<body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
-    <nav class="navbar navbar-expand-sm">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="{{ url_for('static', filename='img/favicon.ico') }}" width="40" height="40"> Rentalstart
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      {% block content1 %}
     </div>
     </nav>
-
     {% block content2 %}
 <!-- Page content-->
 <section class="py-5">
@@ -109,14 +99,11 @@
 </section>
 <!-- 사업자명, 직책, 문의유형, 필요물품, 아이디, 이름, -->
 
-
+{% endblock %}
 <footer class="container-fluid text-center">
-  <img src="{{ url_for('static', filename='img/rs-gradation.png') }}" width="100" height="100">
-  <!-- <ul class="list-inline mb-5">
-    <li class="list-inline-item">
-      <a class="social-link rounded-circle" href="#!"><i class="icon-social-facebook"></i></a>
-    </li>
-  </ul> -->
+  <a href="/" target="_self">
+    <img src="{{ url_for('static', filename='img/rs-gradation.png') }}" width="80" height="80"> </a>
+  <br><br>
   <p class="text-muted small mb-0">Copyright &copy; 멈추지마 ALL RIGHTS RESERVED.</p>
   <p class="text-muted small mb-0">상호명 : 멈추지마 (Don't Stop)</p>
   <p class="text-muted small mb-0">대표 : 김태호</p>
@@ -182,6 +169,5 @@ $(document).ready(function(){
       })
   })()
 </script>
-{% endblock %}
 </body>
 </html>
