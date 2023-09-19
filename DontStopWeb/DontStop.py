@@ -1,5 +1,7 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 from flask import request
+from flask import session
+from flask import url_for
 import pymysql
 
 
@@ -29,6 +31,11 @@ def inquire_food():
 @app.route('/inquire_cafe', methods=['GET'])
 def inquire_cafe():
     return render_template('inquire_cafe.html')
+
+@app.route('/notice', methods=['GET'])
+def notice():
+    return render_template('notice.html')
+
 
 @app.route('/inquire_process', methods=['post'])
 def inquire_process():
