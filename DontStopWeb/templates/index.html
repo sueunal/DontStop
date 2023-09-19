@@ -25,16 +25,16 @@
   <meta property="og:type" content="website">
 </head>
 
-{% block content1 %}
 <body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
     <nav class="navbar navbar-expand-sm">
     <div class="container">
       <a class="navbar-brand" href="/">
-        <img src="{{ url_for('static', filename='img/favicon.ico') }}" width="40" height="40"> Rentalstart
-      </a>
+        <img src="{{ url_for('static', filename='img/favicon.ico') }}" width="40" height="40"> Rentalstart</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    {% block content1 %}
     <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -46,6 +46,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/notice">Notice</a>
+        </li>
       </ul>
     </div>
     </div>
@@ -56,7 +59,7 @@
     <h1 class="display text-with-gradient"><strong>Rentalstart</strong></h1>
     <p>최저가보다 최저가로 렌탈서비스 이용</p>
     <a class="text-center" href="/inquire" role="button">
-      <button type="button" class="btn btn-">간편상담신청하기</button>
+      <button type="button" class="btn">간편상담신청하기</button>
     </a>
   </div>
 
@@ -263,15 +266,14 @@
         무료 상담으로 진행되며 주문 확정 후 미계약 처리 시 결제가 이루어지지 않습니다. </p>
     </div>
 
+    {% endblock %} 
     <footer class="container-fluid text-center">
       <a href="/" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>
         <p>HOME</p>
-        <ul class="list-inline mb-5">
-          <li class="list-inline-item">
-            <a class="social-link rounded-circle" href="/"><i class="icon-social-instagram"></i></a>
-          </li>
-        </ul>
+        <a href="/" target="_self">
+          <img src="{{ url_for('static', filename='img/rs-gradation.png') }}" width="80" height="80"> </a>
+        <br><br>
         <p class="text-muted small mb-0">Copyright &copy; 멈추지마 ALL RIGHTS RESERVED.</p>
         <p class="text-muted small mb-0">상호명 : 멈추지마 (Don't Stop)</p>
         <p class="text-muted small mb-0">대표 : 김태호</p>
@@ -323,7 +325,6 @@
       });
       
     </script>
-{% endblock %} 
-</body>
 
+</body>
 </html>
