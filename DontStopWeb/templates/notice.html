@@ -1,23 +1,17 @@
 {% extends 'index.html' %}
-{% block content %}
+{% block content1 %}
     <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index#contact">Contact</a>
+          <a class="nav-link" href="{{ url_for('index') }}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/notice" role="button">Notice</a>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control p-0 me-2" type="search" placeholder="" aria-label="Search">
+        <button class="btn" type="submit">Search</button>
       </form>
     </div>
     </div>
@@ -26,7 +20,8 @@
   <div class="jumbotron text-center">
     <span><em>렌탈을 쉽게 시작하는 곳</em></span>
     <h1 class="display text-with-gradient"><strong>Rentalstart</strong></h1>
-    <h5>✳️ Rentalstart에 대한 공지사항을 알려드려요.</h5><br>
+    <p>렌탈스타트 | 렌탈의모든 것</p>
+    <p>&#128315; &#128071; &emsp; &#128071; &emsp; &#128071; &#128315;</p>
     <a class="text-center" href="/inquire" role="button">
       <button type="button" class="btn btn-">간편상담신청하기</button>
     </a>
@@ -37,6 +32,7 @@
     <div class="row">
       <div class="col-sm-8">
         <h2>공지사항</h2><br>
+        <h5>✳️ Rentalstart에 대한 공지사항을 알려드려요.</h5><br>
         <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center">
           ⓵ &emsp; 게시판 </div>
       </div>

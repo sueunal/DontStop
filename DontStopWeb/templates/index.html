@@ -34,7 +34,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    {% block content1 %}
+  {% block content1 %}
     <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -47,7 +47,7 @@
           <a class="nav-link" href="#contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/notice">Notice</a>
+          <a class="nav-link" href="{{ url_for('notice') }}" target="_self">Notice</a>
         </li>
       </ul>
     </div>
@@ -266,7 +266,7 @@
         무료 상담으로 진행되며 주문 확정 후 미계약 처리 시 결제가 이루어지지 않습니다. </p>
     </div>
 
-    {% endblock %} 
+  {% endblock %} 
     <footer class="container-fluid text-center">
       <a href="/" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>
