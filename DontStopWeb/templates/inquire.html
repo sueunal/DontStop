@@ -1,0 +1,173 @@
+{% extends 'index.html' %}
+      {% block content1 %}
+    </div>
+    </nav>
+    {% block content2 %}
+<!-- Page content-->
+<section class="py-5">
+  <div class="container px-5">
+    <!-- Contact form-->
+    <div class="bg-grey py-5 px-10">
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">간편 상담 신청</h2>
+        <p class="lead fw-normal text-muted mb-0">전문 상담사를 연결해 드릴게요 ! </p>
+      </div>
+      
+      <div class="row justify-content-center">
+          <div class="col-sm-10 col-lg-10">
+            <form action="/inquire_process" method="post"> 
+              <div class="form-group px-2" data-bs-toggle="buttons">
+                <label for="input_radio" class="form-label"><h5> 필요한 물품을 선택해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
+                 <div class="form-control mb-3">
+                  <div class="form-check-inline">
+                    <label><input type="checkbox" name="checkOptions" value="첫번재값" required> 첫번재값 &emsp;</label>
+                    <label><input type="checkbox" name="checkOptions" value="두번째값"> 두번째값 </label>
+                  <!-- 체크 안되면 체크해달라는 문구가 뜨게 해야함. 데이터가 올바르게 디비에 전송되는지 확인해야함. -->
+                  </div>
+                </div> 
+
+                <!-- <div class="form-check mb-4">
+                  <input type="checkbox" class="btn-check" id="btn-check1" name="checkOptions">
+                  <label class="btn" for="btn-check1">에어컨</label>
+                  <input type="checkbox" class="btn-check" id="btn-check2" name="checkOptions">
+                  <label class="btn" name="checkOptions" for="btn-check2">냉장고</label>
+                </div> 버튼으로 꾸미고 싶었지만 실패-->
+                {% endblock %}
+
+
+                <label for="input_radio" class="form-label"><h5> 사업의 형태가 어떻게 되시나요? <span style="color: teal; font-size:x-large;" >*</span> </h5></label>
+                <div class="form-control mb-4">
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="개인사업자" required> 개인사업자 &emsp; </label>
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="법인사업자"> 법인사업자 &emsp; </label>
+                  <label class="radio-inline"><input type="radio" name="radioOptions" value="없음"> 없음</label>
+                </div>
+
+                <label for="input_radio" class="form-label"><h5> 이름을 입력해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
+                <div class="form-floating mb-4">
+                  <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required/>
+                  <label for="name">Full name</label>
+                  <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                </div>
+
+                <label for="input_radio" class="form-label"><h5> 직책을 선택해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
+                  <input class="form-control mb-4 p-3" list="datalistOptions" id="exampleDataList" name="list" placeholder="Type to position" required>
+                  <datalist id="datalistOptions">
+                    <option name="one" value="사장">
+                    <option  name="two"value="점장">
+                    <option  name="three" value="매니저">
+                  </datalist>
+
+                  <label for="input_radio" class="form-label"><h5> 핸드폰 번호를 입력해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
+                <div class="form-floating mb-4">
+                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" required/>
+                    <label for="phone">Phone number</label>
+                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                </div>
+
+                <label for="input_radio" class="form-label"><h5> 이메일을 입력해주세요! </h5></label>
+                <div class="form-floating mb-4">
+                    <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" required/>
+                    <label for="email">Email address</label>
+                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                </div>
+
+                <label for="input_radio" class="form-label"><h5> 문의하실 내용을 남겨주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" id="message" name="comment" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" required></textarea>
+                    <label for="message">Message</label>
+                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                </div>
+
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                        To activate this form, sign up at<br>
+                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                    </div>
+                </div>
+                <!-- Submit error message-->
+                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                <!-- Submit Button-->
+                <div class="d-grid"><button class="btn btn-lg abled" id="submitButton" type="submit">Submit</button></div>
+            </form>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+</section>
+<!-- 사업자명, 직책, 문의유형, 필요물품, 아이디, 이름, -->
+
+{% endblock %}
+<footer class="container-fluid text-center">
+  <a href="/" target="_self">
+    <img src="{{ url_for('static', filename='img/rs-gradation.png') }}" width="80" height="80"> </a>
+  <br><br>
+  <p class="text-muted small mb-0">Copyright &copy; 멈추지마 ALL RIGHTS RESERVED.</p>
+  <p class="text-muted small mb-0">상호명 : 멈추지마 (Don't Stop)</p>
+  <p class="text-muted small mb-0">대표 : 김태호</p>
+  <p class="text-muted small mb-0">사업자등록번호 : 531-69-00457</p>
+  <p class="text-muted small mb-0">e-mail : xogh5525@naver.com</p>
+  <p class="text-muted small mb-0">전라남도 무안군 삼향읍 영산로 1028 1층 (우 : 58560)</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#HomePage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  $(function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+</script>
+</body>
+</html>

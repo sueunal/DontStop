@@ -1,0 +1,15 @@
+{% extends 'inquire_food.html' %}
+{% block content3 %}
+          <p class="lead fw-normal text-muted mb-0">카페 전문 상담사를 연결해 드릴게요 ! </p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-lg-10">
+              <form action="/inquire_process" method="post"> 
+                <div class="form-group px-2" data-bs-toggle="buttons">
+                  <label for="input_radio" class="form-label"><h5> 필요한 물품을 선택해주세요! <span style="color: teal; font-size:x-large;" >*</span></h5></label>
+                   <div class="form-control mb-3">
+                    <div class="form-check-inline">
+                      <label><input type="checkbox" name="checkOptions" value="냉장고" required> 냉장고 &emsp;</label>
+                      <label><input type="checkbox" name="checkOptions" value="커피머신"> 커피머신 </label>
+                      {% endblock %}
