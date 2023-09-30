@@ -44,10 +44,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% if question_list %} <!-- 전달받은 질문 목록 데이터 question_list가 있는지 검사한다. -->
-                {% for question in question_list %} <!-- 저장된 데이터를 하나씩 꺼내 question 객체에 대입-->
+
+               <!-- {% if question_list %}  전달받은 질문 목록 데이터 question_list가 있는지 검사한다.
+                {% for question in question_list %} 저장된 데이터를 하나씩 꺼내 question 객체에 대입
                 <tr>
-                    <td>{{ loop.index }}</td> <!--1부터 1씩 증가-->
+                    <td>{{ loop.index }}</td> 1부터 1씩 증가
                     <td>
                         <a href="{{ url_for('question.detail', question_id=question.id) }}">{{ question.subject }}</a>
                     </td>
@@ -58,7 +59,17 @@
                 <tr>
                     <td colspan="3">질문이 없습니다.</td>
                 </tr>
-                {% endif %} <!--분기문 태그 끝-->
+                {% endif %} 분기문 태그 끝 -->
+
+                <tr>
+                  <td>1</td>
+                  <td>렌탈스타트를 이용하는 절차가 어떻게 되나요?</td>
+                  <td>2023.10.01</td>
+                </tr>
+
+
+
+
                 </tbody>
             </table>
           </div>
