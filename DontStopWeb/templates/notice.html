@@ -11,7 +11,7 @@
       </ul>
       <form class="d-flex">
         <input class="form-control p-0 me-2" type="search" placeholder="" aria-label="Search">
-        <button class="btn" type="submit">Search</button>
+        <button class="btn-light" type="submit">🔍︎</button>
       </form>
     </div>
     </div>
@@ -30,11 +30,39 @@
    <!-- Container (About Section) -->
    <div id="about" class="container-fluid">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-12">
         <h2>공지사항</h2><br>
-        <h5>✳️ Rentalstart에 대한 공지사항을 알려드려요.</h5><br>
-        <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center">
-          ⓵ &emsp; 게시판 </div>
+        <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center"><br>
+          <h5>✳️ Rentalstart에 대한 공지사항을 알려드려요.</h5><br>
+          <div class="container my-3">
+            <table class="table">
+                <thead>
+                <tr class="table-dark">
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성일시</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if question_list %} <!-- 전달받은 질문 목록 데이터 question_list가 있는지 검사한다. -->
+                {% for question in question_list %} <!-- 저장된 데이터를 하나씩 꺼내 question 객체에 대입-->
+                <tr>
+                    <td>{{ loop.index }}</td> <!--1부터 1씩 증가-->
+                    <td>
+                        <a href="{{ url_for('question.detail', question_id=question.id) }}">{{ question.subject }}</a>
+                    </td>
+                    <td>{{ question.create_date }}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="3">질문이 없습니다.</td>
+                </tr>
+                {% endif %} <!--분기문 태그 끝-->
+                </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
