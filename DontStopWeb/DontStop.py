@@ -9,6 +9,11 @@ app = Flask(__name__)
 # db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 
 
+@app.route('/register') # 경로설정
+def register():
+	return render_template('register.html')
+    
+
 @app.route('/', methods= ['POST','GET'])
 def index():
     return render_template('index.html')
