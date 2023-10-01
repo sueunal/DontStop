@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block content1 %}
+<div class="collapse navbar-collapse justify-content-end" id="myNavbar">
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1 class="display text-with-gradient"><strong>Rentalstart</strong></h1>
+  <span><em>관리자 페이지</em></span>
+</div>
+
+<div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+                <!-- <form method="POST" action="/login_action">
+                    <div class="form-group py-2">
+                        <label for="username">아이디</label>
+                        <input type="text" class="form-control" id="userid" placeholder="아이디" name="userid" />
+                    </div>
+                    <div class="form-group py-2">
+                        <label for="username">비밀번호</label>
+                        <input type="password" class="form-control" id="password" placeholder="비밀번호" name="password" />
+                    </div>
+                    <button type="submit" class="btn">login</button>
+                </form> -->
+                <form method="POST" action="{{ url_for('login') }}">
+                    {{ form.hidden_tag() }}
+                    <div class="form-group py-2">
+                        {{ form.username.label }}
+                        {{ form.username() }}
+                    </div>
+                    <div class="form-group py-2">
+                        {{ form.password.label }}
+                        {{ form.password() }}
+                    </div>
+                    <div>
+                        {{ form.submit() }}
+                    </div>
+                </form>
+
+        </div>
+    </div>
+</div>
+        {% endblock %}
+

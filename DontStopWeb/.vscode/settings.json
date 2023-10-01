@@ -1,5 +1,5 @@
 {
     "terminal.integrated.fontSize": 15,
-    "editor.fontSize": 15,
+    "editor.fontSize": 14,
     "files.autoSave": "afterDelay"
 }
