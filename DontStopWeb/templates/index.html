@@ -26,31 +26,33 @@
 </head>
 
 <body id="HomePage" data-bs-spy="scroll" data-bs-target=".navbar" data-offset="60">
-    <nav class="navbar navbar-expand-sm">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="/">
         <img src="{{ url_for('static', filename='img/favicon.ico') }}" width="40" height="40"> Rentalstart</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#Navbar" aria-controls="Navbar"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+       </button>
 
-  {% block content1 %}
-    <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('notice') }}" target="_self">Notice</a>
-        </li>
-      </ul>
-    </div>
+   {% block content1 %}
+      <div class="collapse navbar-collapse justify-content-end" id="Navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('notice') }}" target="_self">Notice</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -164,21 +166,26 @@
       </div>
       <div class="row row-cols-1 row-cols-md-3 mb-4">
           <div class="col mb-4 mb-md-0">
-          <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">TV/오디오
-            (TV, 프로젝터,하이엔드 오디오, 스피커) </div></div>
-          <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">주방가전
-            냉장고, 정수기, 식기세척기, 후드 전기레인지, 오븐/전자레인지, 쿠커
+          <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+            TV/오디오 (TV, 프로젝터,하이엔드 오디오, 스피커) </div></div>
+          <div class="col mb-4 mb-md-0">
+          <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+            주방가전 (냉장고, 정수기, 식기세척기, 후드 전기레인지, 오븐/전자레인지, 쿠커)
             </div></div>
-          <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">생활가전
-            세탁기, 건조기, 에어드레서, 슈드레서, 에어컨, 공기청정기, 제습기, 청소기, 소형가전
+          <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+            생활가전 (세탁기, 건조기, 에어드레서, 슈드레서, 에어컨, 공기청정기, 제습기, 청소기, 소형가전)
             </div></div>
       </div>
       <div class="row row-cols-1 row-cols-md-3">
-          <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">PC/주변기기
-            데스크탑, 갤럭시북, 프린터, 모니터
+          <div class="col mb-4 mb-md-0">
+            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+            PC/주변기기 데스크탑, 갤럭시북, 프린터, 모니터
             </div></div>
-          <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">의료기기</div></div>
-          <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">LED 조명</div></div>
+          <div class="col mb-4 mb-md-0">
+            <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+            의료기기</div></div>
+          <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">
+            LED 조명</div></div>
       </div>
     </div>
     
@@ -299,7 +306,7 @@
             // 스크롤 애니메이션 적용
             $('html, body').animate({
               scrollTop: $(hash).offset().top
-            }, 900, function () {
+            }, 400, function () {
 
               // URL의 해시 값을 업데이트 (뒤로 가기 버튼을 위해)
               window.location.hash = hash;
