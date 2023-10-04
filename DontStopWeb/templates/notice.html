@@ -10,7 +10,7 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control p-0 me-2" type="search" placeholder="궁금한 내용을 검색해보세요." aria-label="Search">
+        <input class="form-control p-0 me-2" type="search" placeholder=" " aria-label="Search">
         <button class="btn-light" type="submit">🔍︎</button>
       </form>
     </div>
@@ -35,7 +35,48 @@
         <div class="card-title shadow border-0 rounded-3 mb-3 p-2 text-center"><br>
           <h5>✳️ Rentalstart에 대한 공지사항을 알려드려요.</h5><br>
           <div class="container my-3">
-            <table class="table">
+
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    #1 렌탈스타트를 이용하는 절차가 어떻게 되나요? 
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>렌탈스타트는.</strong> 아주 간단 편리 굿 <code> 빠릅니다 </code> 상담을 통해 이용해보세요.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    #2  개인정보는 어떻게 처리되나요 
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>T테스트테스트.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    #3 대출인가요? 
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>테스트테스트.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- <table class="table">
                 <thead>
                 <tr class="table-dark">
                     <th>번호</th>
@@ -45,7 +86,7 @@
                 </thead>
                 <tbody>
 
-               <!-- {% if question_list %}  전달받은 질문 목록 데이터 question_list가 있는지 검사한다.
+               {% if question_list %}  전달받은 질문 목록 데이터 question_list가 있는지 검사한다.
                 {% for question in question_list %} 저장된 데이터를 하나씩 꺼내 question 객체에 대입
                 <tr>
                     <td>{{ loop.index }}</td> 1부터 1씩 증가
@@ -59,7 +100,7 @@
                 <tr>
                     <td colspan="3">질문이 없습니다.</td>
                 </tr>
-                {% endif %} 분기문 태그 끝 -->
+                {% endif %} 분기문 태그 끝
 
                 <tr>
                   <td>1</td>
@@ -71,7 +112,7 @@
 
 
                 </tbody>
-            </table>
+            </table> -->
           </div>
         </div>
       </div>
