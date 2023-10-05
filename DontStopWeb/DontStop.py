@@ -2,6 +2,12 @@ from flask import Flask, render_template
 from flask import request
 from flask import session
 from flask import url_for
+
+from flask_restful import Resource
+from flask_restful import reqparse
+from flask_restful import Api
+
+
 import pymysql
 import os
 from flask import Flask, render_template, redirect, url_for, flash
@@ -10,13 +16,14 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
 # from flask_bootstrap import Bootstrap
 
+app = Flask('rentalstart')
 
 class LoginForm(FlaskForm): 
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Log In')
 
-app = Flask(__name__)
+
 db = pymysql.connect(host='localhost', port=11245, user='RentalStart', passwd='vip0818!', db='RentalStart', charset='utf8')
 visitor_ips = []
 secret_key = os.urandom(24)
@@ -100,5 +107,7 @@ def process():
     
 
 if __name__ == '__main__':
+
     app.secret_key = secret_key  # Replace 'secret_key' with your generated secret key
     app.run(host='0.0.0.0', port=8888, debug=True)
+    api = Api(app)
