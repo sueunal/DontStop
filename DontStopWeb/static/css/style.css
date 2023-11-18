@@ -166,7 +166,7 @@ h4 {
   -webkit-background-clip: text; /* 텍스트에만 그라데이션 적용 (웹킷 브라우저용) */
   background-clip: text; /* 텍스트에만 그라데이션 적용 */
   color: transparent; /* 텍스트 색상을 투명하게 설정 */
-  text-fill-color: transparent; /* 텍스트의 실제 색상을 투명하게 설정 (웹킷 브라우저용) */
+  -webkit-fill-color: transparent; /* 텍스트의 실제 색상을 투명하게 설정 (웹킷 브라우저용) */
 }
 
 .container-fluid {
