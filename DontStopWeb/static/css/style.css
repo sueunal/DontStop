@@ -44,12 +44,12 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Pretendard-Regular";
+  --bs-font-sans-serif: "Pretendard Variable" , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1.1rem;
-  --bs-body-font-weight: 00;
+  --bs-body-font-weight: 410;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
@@ -69,12 +69,7 @@
   --bs-highlight-bg: #fff3cd;
 }
 
-@font-face {
-  font-family: 'Pretendard';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 
 
 @keyframes slide {
@@ -98,6 +93,18 @@
   100% {
     opacity: 1;
     -webkit-transform: translateY(0%);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
   }
 }
 
@@ -134,7 +141,7 @@
 
 body {
   margin: 0;
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -145,24 +152,33 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-h1 {
-  font-size: 50px;
-}
-
 h2 {
-    font-size: 35px;
+    font-size: 30px;
     text-transform: uppercase;
     color: var(--bs-purple);
     font-weight: 800;
     margin-bottom: 15px;
   }
-h3 {
-    font-size: 25px;
+h4 {
+    font-size: 19px;
     line-height: 1.375em;
     color: #303030;
     font-weight: 400;
     margin-bottom: 30px;
 }  
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 
 .jumbotron {
   background-color: var(--bs-gray-100);
@@ -171,12 +187,22 @@ h3 {
   font-family: "GmarketSans", sans-serif;
 }
 
+.text-mint {
+  color: #79ceb8;
+}
+
 .text-with-gradient {
+  font-size: 45px; /* 폰트 크기 설정 */
   background-image: linear-gradient(#451cff, #a200ff); /* 그라데이션 색상 설정 */
   -webkit-background-clip: text; /* 텍스트에만 그라데이션 적용 (웹킷 브라우저용) */
   background-clip: text; /* 텍스트에만 그라데이션 적용 */
   color: transparent; /* 텍스트 색상을 투명하게 설정 */
   -webkit-fill-color: transparent; /* 텍스트의 실제 색상을 투명하게 설정 (웹킷 브라우저용) */
+}
+
+.bg-gradient-primary-to-secondary {
+  background: #1e30f3;
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
 }
 
 .container-fluid {
@@ -294,12 +320,10 @@ h3 {
   background-color: var(--bs-gray-100);
   z-index: 9999;
   border: 0;
-  font-size: 18px !important;
-  line-height: 1.4 !important;
-  letter-spacing: 1px;
+  font-size: 17px !important;
+  letter-spacing: 0px;
   border-radius: 0;
-  font-family: "Pretendard-Regular"
-  var(--bs-body-font-weight)
+  font-family: "GmarketSans", sans-serif
 }
 
 .navbar li a,
