@@ -6,6 +6,7 @@ from flask import url_for
 
 
 app = Flask(__name__)
+app.config.from_envvar('APP_CONFIG_FILE')
 # db = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='RentalStart', charset='utf8')
 
 @app.route('/', methods= ['POST','GET'])
