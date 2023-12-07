@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask import request
 from flask import session
 from flask import url_for
-import pymysql
+# import pymysql
 
 
 app = Flask(__name__)
