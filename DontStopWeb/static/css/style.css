@@ -44,7 +44,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "GmarketSans";
+  --bs-font-sans-serif: "Pretendard Variable" , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -69,6 +69,8 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
 
 @keyframes slide {
   0% {
@@ -91,6 +93,18 @@
   100% {
     opacity: 1;
     -webkit-transform: translateY(0%);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
   }
 }
 
@@ -127,7 +141,7 @@
 
 body {
   margin: 0;
-  font-family: "Montserrat";
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -153,11 +167,28 @@ h4 {
     margin-bottom: 30px;
 }  
 
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 .jumbotron {
   background-color: var(--bs-gray-100);
   color: #777777;
   padding: 100px 25px;
   font-family: "GmarketSans", sans-serif;
+}
+
+.text-mint {
+  color: #79ceb8;
 }
 
 .text-with-gradient {
@@ -166,7 +197,12 @@ h4 {
   -webkit-background-clip: text; /* 텍스트에만 그라데이션 적용 (웹킷 브라우저용) */
   background-clip: text; /* 텍스트에만 그라데이션 적용 */
   color: transparent; /* 텍스트 색상을 투명하게 설정 */
-  text-fill-color: transparent; /* 텍스트의 실제 색상을 투명하게 설정 (웹킷 브라우저용) */
+  -webkit-fill-color: transparent; /* 텍스트의 실제 색상을 투명하게 설정 (웹킷 브라우저용) */
+}
+
+.bg-gradient-primary-to-secondary {
+  background: #1e30f3;
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
 }
 
 .container-fluid {
@@ -285,10 +321,9 @@ h4 {
   z-index: 9999;
   border: 0;
   font-size: 17px !important;
-  line-height: 1.4 !important;
-  letter-spacing: 4px;
+  letter-spacing: 0px;
   border-radius: 0;
-  font-family: "Nanum Gothic"
+  font-family: "GmarketSans", sans-serif
 }
 
 .navbar li a,
