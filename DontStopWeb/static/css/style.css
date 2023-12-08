@@ -44,12 +44,12 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "GmarketSans";
+  --bs-font-sans-serif: "Pretendard Variable" , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
+  --bs-body-font-size: 1.1rem;
+  --bs-body-font-weight: 410;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
@@ -68,6 +68,8 @@
   --bs-code-color: #e21e80;
   --bs-highlight-bg: #fff3cd;
 }
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 
 
 @keyframes slide {
@@ -94,6 +96,18 @@
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .col-sm-4 {
     text-align: center;
@@ -112,9 +126,22 @@
   }
 }
 
+ /* Keyframes를 사용하여 이미지를 위아래로 움직이는 애니메이션 정의 */
+ @keyframes moveUpDown {
+  0% {
+    transform: translateY(0); /* 초기 위치 */
+  }
+  50% {
+    transform: translateY(-20px); /* 중간 위치 */
+  }
+  100% {
+    transform: translateY(0); /* 최종 위치 (원래 위치로 돌아감) */
+  }
+}
+
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -140,11 +167,42 @@ h4 {
     margin-bottom: 30px;
 }  
 
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 .jumbotron {
-  background-color: #fff;
-  color: var(--bs-purple);
+  background-color: var(--bs-gray-100);
+  color: #777777;
   padding: 100px 25px;
   font-family: "GmarketSans", sans-serif;
+}
+
+.text-mint {
+  color: #79ceb8;
+}
+
+.text-with-gradient {
+  font-size: 45px; /* 폰트 크기 설정 */
+  background-image: linear-gradient(#451cff, #a200ff); /* 그라데이션 색상 설정 */
+  -webkit-background-clip: text; /* 텍스트에만 그라데이션 적용 (웹킷 브라우저용) */
+  background-clip: text; /* 텍스트에만 그라데이션 적용 */
+  color: transparent; /* 텍스트 색상을 투명하게 설정 */
+  -webkit-fill-color: transparent; /* 텍스트의 실제 색상을 투명하게 설정 (웹킷 브라우저용) */
+}
+
+.bg-gradient-primary-to-secondary {
+  background: #1e30f3;
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
 }
 
 .container-fluid {
@@ -152,7 +210,7 @@ h4 {
 }
 
 .bg-grey {
-  background-color: #f6f6f6;
+  background-color: var(--bs-gray-100);
 }
 
 .logo-small {
@@ -196,7 +254,7 @@ h4 {
   line-height: 1.375em;
   font-weight: 400;
   font-style: italic;
-  margin: 70px 0;
+  margin: 50px 0;
 }
 
 .item span {
@@ -204,7 +262,7 @@ h4 {
 }
 
 .panel {
-  border: 1px solid #a299ca;
+  border: 1px solid #79ceb8;
   border-radius: 0 !important;
   transition: box-shadow 0.5s;
   padding: 50px 50px 50px 50px ;
@@ -215,9 +273,9 @@ h4 {
 }
 
 .panel-footer .btn:hover {
-  border: 1px solid #a299ca;
+  border: 1px solid #79ceb8;
   background-color: #fff !important;
-  color: #a299ca;
+  color: #79ceb8;
 }
 
 .panel-heading {
@@ -232,7 +290,7 @@ h4 {
 }
 
 .btn {
-  background-color: #F4DD4E;
+  background-color: #00cc99;
   color: white;
 }
 
@@ -252,43 +310,46 @@ h4 {
 
 .panel-footer .btn {
   margin: 15px 0;
-  background-color: #a299ca;
+  background-color: #79ceb8;
   color: #fff;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .2);
 }
 
 .navbar {
   margin-bottom: 0;
-  background-color: #F4DD4E;
+  background-color: var(--bs-gray-100);
   z-index: 9999;
   border: 0;
   font-size: 17px !important;
-  line-height: 1.42857143 !important;
-  letter-spacing: 4px;
+  letter-spacing: 0px;
   border-radius: 0;
-  font-family: "GmarketSans";
+  font-family: "GmarketSans", sans-serif
 }
 
 .navbar li a,
 .navbar .navbar-brand {
-  color: #fff !important;
+  color: var(--bs-purple) !important;
 }
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-  color: #F4DD4E !important;
-  background-color: #fff !important;
+  color: var(--bs-teal) !important;
+  background-color: var(--bs-gray-100) !important;
 }
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
-  color: #fff !important;
+  color: var(--bs-purple) !important;
 }
 
 footer .glyphicon {
-  font-size: 20px;
+  font-size: 10px;
   margin-bottom: 20px;
   color: #ecec84;
+}
+
+footer {
+  font-size: 10px;
 }
 
 .slideanim {
@@ -306,7 +367,8 @@ footer .glyphicon {
 .quickmenu {
   position: absolute;
   top: 85%;
-  right: 40px;
+  right: 30px;
+  z-index: 9999;
 }
 
 ul {
@@ -391,4 +453,9 @@ a {
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
+}
+
+ /* 애니메이션 적용 스타일 */
+.animated-image {
+  animation: moveUpDown 2s infinite; /* 2초 간격으로 반복 */
 }
